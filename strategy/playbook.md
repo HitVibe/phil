@@ -9269,3 +9269,17 @@ Provisional at n=1; revisit at n>=3.
 - **No gate changes.** The 2 winning say-the-word bets (transcript-count
   method; that method is 3/3 bets and its 15 tagged forecasts net -0.034)
   are insufficient data to move anything.
+
+## 2026-10-14 02:2xZ update: JNJ IM / GS beat OVV rows carried into the table (FULL, reconcile.py check 5)
+
+Both rows were graded in RETRO-20261013-1240 / RETRO-20261013-1430 but never
+reached this file, so `reconcile.py` flagged them. Carried here with the
+retros' counterfactual.py numbers; no rule change.
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| JNJ Q3 IM rev > $17B (`93f175782016`, OVV) | 0.25/0.45 | No | wide book 0.36/0.54 | No | +2.81 |
+| GS beat quarterly earnings (`e8b241c3ee5e`, OVV) | 0.30/0.425 | No | +0.12 (No @0.58) | Yes | -5.00 |
+
+Net -2.19 counterfactual: the veto saved $2.19 across the pair (the JNJ leg
+would also have tripped max_spread). Earnings OVV subclass stays as is.
