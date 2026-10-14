@@ -3050,6 +3050,12 @@ if that window was in a different part of the US day than the window
 being projected. Use the pace from the same UTC hours a day earlier,
 scaled by the multi-day decay, or the trailing 24h average. A decline
 that only shows up in a trough window is not evidence of decay.
+Second settled instance (RETRO-20261014-2215, MrBeast Gaming h8VE9_aHd94
+day4 43-44M): two trough-only reads already projected mid-bracket (~43.46M).
+The rule kept me off the No side at 0.059 (CF -5.00), but my 0.90 shading
+still lost dBrier to the market's 0.967 (+0.009). When trough-only pace
+already lands mid-bracket, sit near the market rather than shading toward
+the tail the trough cannot tell you about.
 
 **2026-09-04 update (LIGHT tick 06:29Z, settled by resolve.py; 4 rows,
 two OpenAI Astra release-timeline markets, two sequential snapshots
