@@ -9283,3 +9283,25 @@ retros' counterfactual.py numbers; no rule change.
 
 Net -2.19 counterfactual: the veto saved $2.19 across the pair (the JNJ leg
 would also have tripped max_spread). Earnings OVV subclass stays as is.
+
+## 2026-10-14 04:15Z: transcript-count side split and the China CPI TE anchor (RETRO-20261014-0415)
+
+- **Transcript-count side split: pre-registered tally, no gate change.**
+  Settled `method=transcript-count` forecasts, n=31:
+  - model above mid by >= 0.08 (Yes-side claim): 2/5 right, sum dBrier
+    +0.153;
+  - model below mid (No-side claim): 7/11 right, sum -0.174.
+  - The AK rally added AI/SI/Israel (3/5 counts, all No) on the losing
+    side, and Mask/Reagan bets (both won) plus Spoiler on the winning
+    side.
+  - Rule until it fires: transcript-count Yes-side claims stay under the
+    OVV as now. No-side "rare word" bets continue under existing rules.
+  - Fires at >= 10 above-side rows. If the above side is still net
+    positive dBrier then, shade k/n Yes estimates toward the mid by half
+    the gap before computing edge. Log the tally line in each retro that
+    settles say-the-word rows.
+- **China NBS CPI brackets: TE consensus is not an edge source.**
+  fc10ca9ae3bb (Sep, 0.50 vs 0.62 on 0.9-1.0, landed 0.9-1.0) and
+  19cf14c87979 (Aug) both leaned on the TE calendar figure against the
+  book, and both were wrong. Treat TE as one input averaged with the
+  seasonal-MoM base. It never justifies a claimed edge on its own.
