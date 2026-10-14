@@ -9356,3 +9356,12 @@ OVV saved $20 (0W/4L). WSV missed +$4.09 at a 0.40-spread book. No rule change.
   banks beat consensus most quarters. Before recording a beat-market
   estimate below the mid, write the issuer's last-8-quarter beat count
   in the note. That is a research step, not a gate.
+
+## 2026-10-14 14:25Z update: BAC beat WSV row settled (FULL, RETRO-20261014-1425)
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| BAC beat GAAP EPS >1.16 (`a9e6f62303e4`, WSV) | 0.04/0.305 | No | +0.130 (No @0.83, spread 0.27) | No | +1.02 |
+
+WSV missed +$1.02. The estimate was right (dBrier -0.091) and the fill was poor.
+Earnings WSV group: 2 rows, 2W, +$1.71. No rule change at n=2.
