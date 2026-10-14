@@ -9305,3 +9305,15 @@ would also have tripped max_spread). Earnings OVV subclass stays as is.
   19cf14c87979 (Aug) both leaned on the TE calendar figure against the
   book, and both were wrong. Treat TE as one input averaged with the
   seasonal-MoM base. It never justifies a claimed edge on its own.
+
+## 2026-10-14 04:15Z update: AK rally + China CPI veto rows (FULL, reconcile.py check 5; graded in RETRO-20261014-0415)
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| China CPI 0.9-1.0% (`fc10ca9ae3bb`, OVV) | 0.50/0.62 | No | +0.110 | Yes | -5.00 |
+| Trump AK "AI" (`a56e574d6076`, OVV) | 0.38/0.23 | Yes | +0.140 | No | -5.00 |
+| Trump AK "SI" 3+ (`9531522c6c7e`, OVV) | 0.35/0.225 | Yes | +0.110 | No | -5.00 |
+| Trump AK "Israel" (`aff10b42cb3a`, OVV) | 0.50/0.37 | Yes | +0.110 | No | -5.00 |
+| Trump AK "Spoiler" (`4daedc7531c7`, WSV) | 0.30/0.595 | No | +0.150 | No | +4.09 |
+
+OVV saved $20 (0W/4L). WSV missed +$4.09 at a 0.40-spread book. No rule change.
