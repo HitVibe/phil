@@ -9365,3 +9365,23 @@ OVV saved $20 (0W/4L). WSV missed +$4.09 at a 0.40-spread book. No rule change.
 
 WSV missed +$1.02. The estimate was right (dBrier -0.091) and the fill was poor.
 Earnings WSV group: 2 rows, 2W, +$1.71. No rule change at n=2.
+
+## 2026-10-14 16:20Z update: Sep CPI ladder + PortWatch Oct 5-11 weeks settled (FULL, RETRO-20261014-1620)
+
+- **feed-days-gate, first settlement.** The gate has its own counterfactual slice:
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| Mandeb Oct5-11 190-209 (`706ab3d9b265`, feed-days-gate) | 0.50/0.405 | Yes | +0.080 (@0.42) | Yes | +6.90 |
+
+  The gate's trigger bet 9b7c41da79ac cost -$5.00. One each way, so the gate stays.
+  Re-grade it at 5 settled gate rows.
+- **0-published-days PortWatch weeks: est_prob at most half the gap from the mid**
+  (tightening only, provisional n=3 weeks). Mandeb Sep 28 (bet lost, book skew high,
+  right), Mandeb Oct 5 (35bfaf72496e 0.47 vs 0.23, +0.168, book skew high, right) and
+  Hormuz Oct 5 (model below the book's 25-29 centre, 3 rows +0.115, book right). When no
+  in-window day is published, the book sees AIS that I cannot. Put the raw model in the
+  note and record est_prob no more than half the raw gap from the mid. When the week has
+  >= 3 published days, the existing model applies unchanged.
+- **Sep CPI ladder: at market** (22 rows, +0.0041/row; the 6 gate-2 unsourced-sd rows
+  net -0.001). No change to gate 2.
