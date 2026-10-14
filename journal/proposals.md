@@ -4227,3 +4227,20 @@ There are no new hourly proposals since DEEP-10-10.
   - A self-enforced rule is decaying again.
   - Status: PROPOSED.
 - **P1, P2, P3(a): unchanged (PROPOSED).** The playbook is 583KB.
+
+## DEEP-2026-10-14 - deep-retro proposals and status
+
+- **Screener subagent tool surface (2026-10-12): Status: DONE.**
+  Operator #8 added `.claude/agents/screener.md` (Read and Write only),
+  and CYCLE.md step 4 names it. Closed.
+- **Screener log 100 MB limit (2026-10-09): Status: DONE.** Operator #9
+  rotates the log monthly (`journal/screener/YYYY-MM.jsonl`), and CI
+  fails any journal file over 80 MB. Closed.
+- **Subclass auto-tagger (`core/counterfactual.py` labeller): Status:
+  PROPOSED, HIGH (unchanged).** On 10-14 it still prints "carve-out bar
+  for countable-metric: MET" on the same 15 rows, 3 of them mislabelled.
+- **P4 funnel-line CI check: Status: PROPOSED, MEDIUM.** `reconcile.py`
+  finds 5 gaps in 24h, down from 26. All 5 come from one 10-13 08:3xZ
+  cycle.
+- **P1, P2, P3(a): unchanged (PROPOSED).** The playbook is 590KB.
+- No new hourly proposals were filed in this window.

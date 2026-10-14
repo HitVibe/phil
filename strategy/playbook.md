@@ -9317,3 +9317,42 @@ would also have tripped max_spread). Earnings OVV subclass stays as is.
 | Trump AK "Spoiler" (`4daedc7531c7`, WSV) | 0.30/0.595 | No | +0.150 | No | +4.09 |
 
 OVV saved $20 (0W/4L). WSV missed +$4.09 at a 0.40-spread book. No rule change.
+
+## DEEP-2026-10-14 rulings
+
+- **OVV relaxation fork: NOT MET (23rd).** `counterfactual.py ledger
+  --skip-reason outside-view-veto`: 258 rows, 181 events, +$157.49,
+  dBrier **+0.0272** (was +0.0243 on 10-13; the veto set got worse, not
+  better). The last 24h added 5 OVV rows that lost as counterfactual
+  bets (GS beat e8b241c3ee5e, China CPI fc10ca9ae3bb, AK AI/SI/Israel)
+  and one that won (JNJ IM 93f175782016). The veto stays.
+- **countable-metric "MET" line: still a labeller artefact.** The tool
+  prints the same 15 rows / +$157.08 as on 10-13, with the same three
+  mislabelled rows. The 10-13 rule stands: never act on that line
+  without a hand-cleaned read.
+- **Transcript-count bets: 5/5, +$14.46, but effective n is 3 rallies
+  (TX, Youngstown, Wasilla). Insufficient data; no stake or gate
+  change.** Ledger ids d49d7465b094, 83ca60b7499c, eb88a2b98dee,
+  dc8620df3fdb, 4e0885f9abf7. Four of the five are No-side
+  "rare word" bets. The RETRO-20261014-0415 side split (Yes-side
+  >mid reads 2/5, sum dBrier +0.153; No-side 7/11, -0.174) is KEPT as
+  the pre-registered test. Two sharpenings:
+  1. The tally counts *events*, not rows, when it is read at the
+     10-row trigger: report rows and distinct rallies together.
+  2. The $10 per-event cap already binds two No-side bets per rally.
+     Do not route a third leg through a sibling market of the same
+     rally to get around it.
+- **Hourly edits since DEEP-10-13, all KEEP:** release-rung off-mid
+  needs a primary-source URL (Gemini/Argon family, 5 off-mid rows all
+  wrong side); venue-local floor narrowed to named landmarks
+  (Youngstown "Data Center" 3e2f26cbde96); lagged-report absence shades
+  at most ~0.05 (Hormuz 09e63789f04c, n=1, provisional); China CPI TE
+  consensus is not a standalone edge (fc10ca9ae3bb, 19cf14c87979, n=2,
+  provisional). Each one tightens a claim of edge and none loosens a
+  gate, so a small n is acceptable here.
+- **Earnings beat/miss rows: watch, no rule.** GS beat e8b241c3ee5e
+  (own 0.30 vs 0.42, beat) is the second earnings-beat row in 24h that
+  was too pessimistic (24h earnings-beat sum dBrier +0.128, n=2). Large
+  banks beat consensus most quarters. Before recording a beat-market
+  estimate below the mid, write the issuer's last-8-quarter beat count
+  in the note. That is a research step, not a gate.
