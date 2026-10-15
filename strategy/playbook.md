@@ -9473,3 +9473,12 @@ WSV saved $5. Totals: 78 rows, 68 trd, 36W/32L, CF -$47.84 (-42.84-5.00 ✓). Ea
 group: 3 rows, 2W/1L, -$3.29 (1.71-5.00 ✓). Earnings-beat research note: when the line sits
 ABOVE consensus, the note must state the beat size needed (line minus consensus) next to the
 issuer's typical beat SIZE. A beat COUNT (SCHW 8/8) does not answer a line-gap question.
+
+## 2026-10-15 20:15Z update: Dallas rain WSV row settled (FULL, RETRO-20261015-2015)
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| Rain Dallas Oct 14 (`e3c1a45dc910`, WSV) | 0.04/0.11 bid-only | No | +0.070 (No @0.89) | No | +0.62 |
+
+The WSV forfeited $0.62. Totals: 79 rows, 69 trd, 37W/32L, CF -$47.22 (-47.84+0.62 ✓). This is a
+measured-print same-day weather row. No rule change at n=1.
