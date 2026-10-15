@@ -9406,3 +9406,12 @@ quarter (n=1, note only).
   dBrier **-0.106** (was 2/5, +0.153). Below-side 7/12, -0.068 (Transgender 5+ knife-edge row
   lost its No lean again). Hold counterfactual this rally +$26.03 missed vs +$15 saved on AK.
   Gate unchanged until the 10-row trigger; at that read, report rows and rallies together.
+
+## 2026-10-15 02:15Z update: AZ rally remaining say-the-word rows (FULL, RETRO-20261015-0215)
+
+- **Transcript-count side tally (pre-registered, not fired):** Israel (0.40/0.29) Yes-side hold
+  resolved No (+0.076, hold saved $5); SI 3+ (0.25/0.165) Yes-side hold resolved Yes (-0.135,
+  CF +$22.78 missed). Above-side now **5/9 rows, sum -0.165**, 4 distinct rallies (AZ = 4 of
+  the 9 rows). Below-side unchanged 7/12, -0.068. AZ hold CF net +$43.81 missed vs +$15 saved
+  on AK. One row from the 10-row trigger; at that read report rows and rallies, and weight by
+  rally (effective n ~5) before deciding the half-gap shade.
