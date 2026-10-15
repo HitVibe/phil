@@ -1574,6 +1574,8 @@ otherwise record at the mid. Evidence: the Gemini 4/Argon family
 d7e0ffbd54f7, 16e825efdc9c, 1413e7390f0b, 3d8e42d35baa), all below the mid,
 all Yes, family dBrier +0.596. The 13 mid rows were flat. Later-than-market
 reads are now 12/12 against me.
+Mid-anchored control rows (RETRO-20261015-0625): Fable 5.2+ Oct 14
+`a301f1e0348d` 0.265/0.26 settled No, dBrier +0.003 -- flat, as the rule predicts.
 
 **Treasury touch drift rule (RETRO-20260928-2215).** For a Treasury
 par-yield touch rung ("hit X% in <month>") with 5 or fewer prints left,
