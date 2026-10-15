@@ -9482,3 +9482,20 @@ issuer's typical beat SIZE. A beat COUNT (SCHW 8/8) does not answer a line-gap q
 
 The WSV forfeited $0.62. Totals: 79 rows, 69 trd, 37W/32L, CF -$47.22 (-47.84+0.62 ✓). This is a
 measured-print same-day weather row. No rule change at n=1.
+
+## 2026-10-15 22:15Z update: IBKR beat OVV + WSV rows settled (FULL, RETRO-20261015-2215)
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| IBKR beat non-GAAP EPS >0.70 (`8deb84c936d1`, OVV, superseded) | 0.60/0.48 | Yes | +0.110 (Yes @0.49) | No | -5.00 |
+| IBKR beat non-GAAP EPS >0.70 (`9457a2d2b5b9`, WSV) | 0.45/0.335 | Yes | -0.010 (Yes @0.46) | No | -5.00 |
+
+Both vetoes saved $5. WSV totals: 80 rows, 70 trd, 37W/33L, CF -$52.22 (-47.22-5.00 ✓).
+OVV tool totals: 260 rows, 252 trd, 104W/148L, +$147.49. Earnings WSV group: 4 rows, 2W/2L,
+-$8.29 (-3.29-5.00 ✓). IBKR printed adjusted $0.67 against a 0.70 line and ~0.67-0.68 consensus.
+
+**Earnings line-above-consensus rule (n=2 today: SCHW `b0905f460b3c`, IBKR `9457a2d2b5b9`, both
+estimated above the mid, both No).** When the market's line exceeds consensus, the estimate
+starts from P(actual - consensus >= line gap), read from the issuer's sourced beat-SIZE history.
+A beat COUNT may not move the estimate above the mid on its own. Without a sourced size history,
+record at or below the mid and put any lean in the note as "shade view: X".
