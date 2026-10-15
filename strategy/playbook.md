@@ -9391,3 +9391,18 @@ Earnings WSV group: 2 rows, 2W, +$1.71. No rule change at n=2.
   >= 3 published days, the existing model applies unchanged.
 - **Sep CPI ladder: at market** (22 rows, +0.0041/row; the 6 gate-2 unsourced-sd rows
   net -0.001). No change to gate 2.
+
+## 2026-10-15 00:15Z update: AZ rally say-the-word + PGR OVV row settled (FULL, RETRO-20261015-0015)
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| PGR Q3 combined ratio 86-89% (`bfe4b4889c74`, OVV) | 0.45/0.595 | No | +0.140 (No @0.41) | Yes | -5.00 |
+
+OVV saved $5.00. The estimate projected a storm-month Sep from 2024-25 history in a quiet cat
+quarter (n=1, note only).
+
+- **Transcript-count side tally (pre-registered, not fired):** AZ rally Hormuz (0.42/0.34) and AI
+  (0.33/0.22) Yes-side holds both resolved Yes. Above-side now 4/7 rows over 4 rallies, sum
+  dBrier **-0.106** (was 2/5, +0.153). Below-side 7/12, -0.068 (Transgender 5+ knife-edge row
+  lost its No lean again). Hold counterfactual this rally +$26.03 missed vs +$15 saved on AK.
+  Gate unchanged until the 10-row trigger; at that read, report rows and rallies together.
