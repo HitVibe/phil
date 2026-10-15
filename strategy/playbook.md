@@ -6963,6 +6963,8 @@ Recorded forecast-only, skip-reason no-edge (aa4bc68026cf Over6.5 est
 if this also lands near-line/no-edge it strengthens the "imported-sigma
 near-line case never clears min_edge" read without needing the n>=6
 fitted-sigma bar to resolve it.
+Graded RETRO-20261015-0415: run total 7-8 vs mu 7.42 (hit), leg dBrier
++0.022/-0.006 (avg +0.008, at market); near-line/no-edge again, as predicted.
 
 ## Mech second opinions: request sequencing and what the pair showed (2026-09-07 08:0xZ)
 
@@ -7897,6 +7899,16 @@ resolved No.
   barrier, est_prob is the raw touch.py value and the reversal view goes
   in the note as "shade view: X", like an inferred open (2026-09-25 rule).
   Recording rule only; touch stays forecast-only.
+  Tally update RETRO-20261015-0415 (BTC $81k d08e000842ef, ETH $2400
+  4198022669a1, ETH $2350 0d47fad74370, Oct 14, all touched in one overnight
+  leg; 2 decisions): all within 0.05, sum +0.013. **Generic session-vol
+  shades are notes too.** BTC was shaded 0.319 -> 0.28 on "overnight hours
+  run below daily vol" and the shade cost 0.055 Brier. A shade off raw
+  touch.py needs a measured, dated intraday vol or price print quoted in
+  the note; a time-of-day prior goes in as "shade view: X". Second
+  far-barrier underestimate: ETH 2350 (2.6% below day low, 7.7h) touch.py
+  0.011 vs mid 0.059, touched (first: 8d1eb46b7c32, 2026-09-21). n=2, no
+  rule; a third instance triggers a proposal for a jump term in touch.py.
 - **Validated-feed sweep, 10-06 retirement test already decided.** The
   test was "retire if no leg outside the Parcl set shows ask-edge >=
   min_edge". USGS '7' bucket 9a2944acc280 (Yes @0.12, own 0.16, edge
