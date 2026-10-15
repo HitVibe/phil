@@ -9462,3 +9462,14 @@ quarter (n=1, note only).
   mid-bracket rule, the measured-print requirement for touch shades, the
   ETH jump-term pre-registration, the PortWatch 0-day half-gap rule, and
   the feed-days-gate slice.
+
+## 2026-10-15 14:20Z update: SCHW beat WSV row settled (FULL, RETRO-20261015-1420)
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| SCHW beat non-GAAP EPS >1.70 (`b0905f460b3c`, WSV) | 0.45/0.40 | Yes | -0.090 (Yes @0.54, spread 0.28) | No | -5.00 |
+
+WSV saved $5. Totals: 78 rows, 68 trd, 36W/32L, CF -$47.84 (-42.84-5.00 ✓). Earnings WSV
+group: 3 rows, 2W/1L, -$3.29 (1.71-5.00 ✓). Earnings-beat research note: when the line sits
+ABOVE consensus, the note must state the beat size needed (line minus consensus) next to the
+issuer's typical beat SIZE. A beat COUNT (SCHW 8/8) does not answer a line-gap question.
