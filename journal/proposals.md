@@ -4244,3 +4244,32 @@ There are no new hourly proposals since DEEP-10-10.
   cycle.
 - **P1, P2, P3(a): unchanged (PROPOSED).** The playbook is 590KB.
 - No new hourly proposals were filed in this window.
+
+## DEEP-2026-10-15 - deep-retro proposals and status
+
+- **Subclass auto-tagger (core/counterfactual.py): Status: PROPOSED,
+  MEDIUM (down from HIGH).**
+  - The carve-out tool now prints "not met", so the false MET signal is
+    gone.
+  - 1652 of 1900 rows are still unlabelled, so no sub-class bar is
+    testable.
+- **P4 funnel-line CI check: Status: PROPOSED, MEDIUM.** `reconcile.py`
+  finds 2 gaps in 24h, both on 10-14 06:40Z (`pool_by_query` and
+  `pool_total`).
+- **P1, P2, P3(a): Status: unchanged (PROPOSED).** The playbook is 597KB.
+- **P5 (new, operator, core/score.py): Status: PROPOSED, LOW-MEDIUM.**
+  - The forecast brier_delta should exclude, or report separately, rows
+    recorded against a placeholder book.
+  - The suggested test is bid-ask ≥ 0.9 at record, or liquidity_at_record
+    under $25.
+  - There are 2 such settled rows, worth -0.484 together. The largest is
+    1972e57bb4e4 (Phoenix rain: est 0.97 vs Gamma mid 0.502 on a
+    0.005/0.999, $17 book) at -0.247.
+- **P6 (new, operator, core/screen.py): Status: CONDITIONAL.**
+  Discovery now carries a Mentions-tag query that adds 113 candidates. The
+  stratifier caps the pool at 300, using closing_48h, top_liquidity,
+  top_volume_24h and random_tail. If the hourly agent's 4-cycle count shows
+  mention markets rarely reach the batches, the ask is a reserved stratum,
+  e.g. at least 20 slots, for tag-targeted queries (`econ-tag`,
+  `mentions-tag`). Do not act until that count is in.
+- No new hourly proposals were filed in this window.

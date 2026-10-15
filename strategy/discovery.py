@@ -64,4 +64,19 @@ def queries(now, min_end, horizon, args, protected):
         #    markets currently, so not included — revisit if that changes.)
         {**base, "_label": "econ-tag", "tag_id": 100328, "order": "volume24hr",
          "ascending": "false"},
+
+        # 5. Mentions tag (DEEP-2026-10-15). say-the-word is the only
+        #    forecast cell with n>=30 that beats the book (dBrier -0.011,
+        #    n=174) and the transcript-count Above-side tally is 5/9, -0.165.
+        #    But the live scan that day returned 0 of the 133 Mentions-tag
+        #    markets within the horizon (558 candidates, all sports/weather/
+        #    crypto/geo). Rally ladders have ~$1-5k lifetime volume, are
+        #    created ~20h before the event, and surfaced only when rally-day
+        #    volume pushed them into query 3. That meant late discovery and
+        #    rushed research. tag 100343 = "mention-markets" (resolved via
+        #    /tags/slug, checked with tags.py check). It also covers
+        #    earnings-call word markets. No volume floor, same reason as
+        #    query 4.
+        {**base, "_label": "mentions-tag", "tag_id": 100343,
+         "order": "volume24hr", "ascending": "false"},
     ]

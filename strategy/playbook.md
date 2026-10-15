@@ -9427,3 +9427,36 @@ quarter (n=1, note only).
   the 9 rows). Below-side unchanged 7/12, -0.068. AZ hold CF net +$43.81 missed vs +$15 saved
   on AK. One row from the 10-row trigger; at that read report rows and rallies, and weight by
   rally (effective n ~5) before deciding the half-gap shade.
+
+## DEEP-2026-10-15 rulings
+
+- **Sensing: Mentions tag added as discovery query 5 (`mentions-tag`, tag 100343).**
+  - The live scan returned 0 of 558 candidates from the 133 live
+    Mentions-tag markets within 168h. Rally ladders have about $1-5k of
+    lifetime volume and surfaced only on rally day through `active-today`.
+  - say-the-word is the only n≥30 forecast cell that beats the book
+    (-0.011, n=174).
+  - **For the next 4 FULL cycles, put a "say-markets screened: N" count in
+    the funnel note.** If N is near 0 even though scan carries them, the
+    stratifier is the bottleneck. That is an operator proposal (DEEP-10-15
+    P6). Do not add more queries first.
+- **Pre-registered rule for the transcript-count Above-side trigger (10th row).**
+  - Compute the per-rally mean dBrier.
+  - Relax the yes-side-transcript-hold, to half-gap only, if at least 3
+    distinct rallies are individually negative.
+  - If one rally carries the sum, wait for a 6th rally. Today's numbers:
+    5/9 rows, -0.165, 4 rallies, AZ = 4 rows. The hold slice is 4 rows,
+    CF +$43.80 missed.
+- **Unfillable placeholder books get `skip_reason: no-ask`, never `no-edge`.**
+  - This applies when bid-ask ≥ 0.9 or there is under $25 of depth.
+  - The Gamma mid on such a book is not a market price.
+  - 1972e57bb4e4 (Phoenix rain, 0.97 vs placeholder 0.502) scored -0.247
+    "skill" that it did not earn.
+- **The OVV relaxation fork is NOT MET for the 24th day** (259 rows,
+  dBrier +0.0276).
+- **wide-spread-veto: KEEP.** The CF is -$42.84 on 77 rows.
+- **countable-metric carve-out** now prints "not met". Nothing to activate.
+- **All hourly edits from 51cd837 to 03fc89d: KEEP.** These are the diurnal
+  mid-bracket rule, the measured-print requirement for touch shades, the
+  ETH jump-term pre-registration, the PortWatch 0-day half-gap rule, and
+  the feed-days-gate slice.
