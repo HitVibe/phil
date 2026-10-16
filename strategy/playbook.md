@@ -9513,3 +9513,40 @@ not only Russia->Kyiv: while any evening/night hours of the local date remain, a
 report may shade the estimate at most 0.05 below the mid (or base rate, whichever is lower).
 A larger shade needs a positive fact (announced pause, ceasefire, confirmed calm-night report),
 not a failed search. Re-grade at the next settlement in this family.
+
+## DEEP-2026-10-16 rulings
+
+- **Touch family (`touch.py` rows) is graded: promotion FAILS; the family stays forecast-only
+  and gets no new escalation effort.** Every settled, non-superseded forecast row whose note
+  cites `touch.py` (crypto/commodities/equity-touch): n=50, sum dBrier **+0.651** (market
+  closer). Split by direction:
+  - own ABOVE mid: n=29, +0.945, 10 wins vs 13.9 implied by our estimates and 11.8 by the
+    mids. Positive in all 4 chronological folds (+0.009, +0.610, +0.179, +0.147). Caveat:
+    only 10 distinct end dates (11 rows end 10-01), so this is ~10 decisions, not 29.
+  - own BELOW mid: n=21, -0.293 (we were closer).
+  - Latest instances: XRP $1.35 `04a4b23c9dc7` 0.63/0.53 (+0.116), BTC $83k `84f11802eb8b`
+    0.41/0.305 (+0.075), both evening 5.7h windows, both no touch.
+  Reading: driftless reflection with 30d daily-close vol prices touch higher than the book,
+  and the book is right more often. The 2026-09-23 promotion bar (beat the market at >=10
+  decisions in both splits, >=60% of decisions) cannot be met on this record.
+  Rules from now:
+  1. When `touch.py` lands ABOVE the mid, record est_prob = the mid plus at most half the gap
+     to the raw output, and put the raw number in the note ("touch.py raw X"). This is a
+     measured correction (n=29, 4/4 folds), not a generic session shade, so it does not
+     conflict with the 10-15 "shade needs a measured print" rule.
+  2. Below-mid rows: record raw as before (that side has been fine).
+  3. Do not spend screener-escalation research slots on touch markets beyond recording
+     forecasts the scan surfaces. Re-grade at the next deep retro after 10 new settled
+     above-mid rows, comparing half-gap rows to their raw note values.
+- **Mentions sensing (DEEP-10-15 query 5) is working.** Say/mention questions in screener
+  batches: 0/900 on 10-15 before the change -> 84/3000 for all of 10-15 and 42/900 so far
+  on 10-16. Proposal P6 (reserved stratum) is withdrawn. Do not widen discovery further.
+- **OVV fork NOT MET (25th):** 260 rows, CF +$147.49, dBrier +0.0280 (worse than +0.0276
+  yesterday). WSV: 80 rows, CF -$52.22, dBrier -0.007, so KEEP max_spread. The
+  transcript-hold tally is unchanged at 9 rows, and the rally-weighted 10th-row rule stands.
+- **Hourly edits 6ac35d28..31e246b0: all KEEP.** The earnings line-above-consensus rule
+  (SCHW `b0905f460b3c`, IBKR `9457a2d2b5b9`) and the generalised city-target absence cap
+  (Kyiv `e5f7ac9f6cbd`, Moscow `236e5dd959fa`) are both restraint rules at n=2, which is fine.
+- **Placeholder mids keep flattering the stream.** Philly rain `241ef13f00b5` was correctly
+  labelled `no-ask` (0.50 placeholder, -0.250). Without it, the last 24h of forecasts were
+  +0.628 over 31 rows. P5 has its third row.

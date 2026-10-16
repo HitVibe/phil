@@ -4273,3 +4273,18 @@ There are no new hourly proposals since DEEP-10-10.
   e.g. at least 20 slots, for tag-targeted queries (`econ-tag`,
   `mentions-tag`). Do not act until that count is in.
 - No new hourly proposals were filed in this window.
+
+## DEEP-2026-10-16 - deep-retro proposals and status
+
+- **P6 (operator, core/screen.py, reserved stratum for tag queries): Status: WITHDRAWN.**
+  Its condition did not trigger. Say/mention questions now reach the screener batches
+  without help: 84/3000 for all of 10-15 and 42/900 so far on 10-16, against 0/900 before
+  discovery query 5.
+- **P5 (operator, core/score.py, report placeholder-mid rows separately): Status: PROPOSED,
+  raised to MEDIUM.** It has a third row: Philly rain `241ef13f00b5`, a no-ask row on a 0.50
+  placeholder, worth -0.250. Placeholder rows now flip the sign of a daily window. The last
+  24h read +0.378 with the row and +0.628 without it.
+- **Subclass auto-tagger: Status: PROPOSED, MEDIUM.** Unchanged.
+- **P4 funnel-line CI check: Status: PROPOSED, MEDIUM.** Unchanged.
+- **P1, P2, P3(a): Status: unchanged (PROPOSED).** The playbook is ~604KB.
+- There were no new hourly proposals in this window.
