@@ -9576,3 +9576,15 @@ bolsonarista candidate's share. It stays unvalidated-method (n=3).
 (b) If an R1 leader sits within 1.5pt of 50% valid and any candidate's votes are sub judice,
 re-read the winner market in the next FULL cycle. Retotalisation can decide the race without a
 runoff.
+
+## 2026-10-16 14:30Z update: Seahawks-Broncos 'Inch' WSV row settled (FULL, RETRO-20261016-1430)
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| SEA-DEN announcers 'Inch/Inches' (`fbbba722cbb1`, WSV) | 0.80/0.505 | Yes | +0.170 (Yes @0.63) | Yes | +2.94 |
+
+The WSV forfeited $2.94. Totals (`core/counterfactual.py ledger`): 81 rows, 71 trd, 38W/33L, CF -$49.29
+(-52.22+2.94 ✓ to rounding). Settled 08:33Z but went ungraded through the 10:25Z and 12:16Z cycles
+(resolve printed 0 because the 08:13Z cycle's run had already settled it); reconcile.py caught it.
+No rule change at n=1: the announcer-series base rate (Laplace 0.79) was right, and the veto
+cost is within the WSV ledger's running pattern (net still negative, so max_spread stays).
