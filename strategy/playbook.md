@@ -9499,3 +9499,17 @@ estimated above the mid, both No).** When the market's line exceeds consensus, t
 starts from P(actual - consensus >= line gap), read from the issuer's sourced beat-SIZE history.
 A beat COUNT may not move the estimate above the mid on its own. Without a sourced size history,
 record at or below the mid and put any lean in the note as "shade view: X".
+
+## 2026-10-16 00:15Z update: Moscow daily-target absence row settled (FULL, RETRO-20261016-0015)
+
+| Row | own/mkt | skip | Result | dBrier |
+|---|---|---|---|---|
+| Ukraine target Moscow Oct 15 (`236e5dd959fa`) | 0.68/0.775 | no-edge | Yes | +0.052 |
+
+**Daily city-target absence cap, generalised (n=2: Kyiv `e5f7ac9f6cbd` 0.70/0.854 Yes, Moscow
+`236e5dd959fa` 0.68/0.775 Yes; both shaded below the mid on absence alone, both Yes).** The
+RETRO-20261009-2015 Kyiv rule applies to every daily "<actor> target <city> on <date>" market,
+not only Russia->Kyiv: while any evening/night hours of the local date remain, absence of a
+report may shade the estimate at most 0.05 below the mid (or base rate, whichever is lower).
+A larger shade needs a positive fact (announced pause, ceasefire, confirmed calm-night report),
+not a failed search. Re-grade at the next settlement in this family.
