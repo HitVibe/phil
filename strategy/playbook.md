@@ -9588,3 +9588,19 @@ The WSV forfeited $2.94. Totals (`core/counterfactual.py ledger`): 81 rows, 71 t
 (resolve printed 0 because the 08:13Z cycle's run had already settled it); reconcile.py caught it.
 No rule change at n=1: the announcer-series base rate (Laplace 0.79) was right, and the veto
 cost is within the WSV ledger's running pattern (net still negative, so max_spread stays).
+
+## 2026-10-16 18:15Z: postcount anchor-rule shadow tally (RETRO-20261016-1815)
+
+The revisit test for the 08:15Z anchor rule is the noted "mechanical read" against the mid at
+settlement. Each retro that settles anchor-rule postcount rows appends to this tally:
+
+| Row | mech/mid | Left at record | Result | mech dBrier vs mid |
+|---|---|---|---|---|
+| Musk Oct9-16 340-359 `dab951634820` | 0.80/0.707 | 3.7h | Yes | -0.046 |
+| Trump Oct9-16 160-179 `e64e7adf9564` | 0.85/0.765 | 3.7h | Yes | -0.033 |
+| Musk Oct9-16 340-359 `00acf24ba4c2` | 0.87/0.8925 | 1.6h | Yes | +0.005 |
+| Trump Oct9-16 160-179 `b227ea26eff8` | 0.92/0.83 | 1.6h | Yes | -0.023 |
+
+Running: n=4/30, mean -0.024 (all endgame, <=4h left). No change at n=4. If the count reaches
+>=10 endgame rows still favouring the mechanical read, propose widening the "nearly decided"
+exception to <=4h left (RETRO-20261016-1815).
