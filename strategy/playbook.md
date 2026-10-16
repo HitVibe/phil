@@ -9550,3 +9550,29 @@ not a failed search. Re-grade at the next settlement in this family.
 - **Placeholder mids keep flattering the stream.** Philly rain `241ef13f00b5` was correctly
   labelled `no-ask` (0.50 placeholder, -0.250). Without it, the last 24h of forecasts were
   +0.628 over 31 rows. P5 has its third row.
+
+## 2026-10-16 08:15Z: postcount anchor rule; Brazil sub-judice retotalisation (RETRO-20261016-0815)
+
+**social-media-postcount: record the mid.** The DEEP-2026-09-26 revisit trigger fired: Musk
+Oct9-16 320-339 `507db33cc54f` (all-windows 0.52 vs mid 0.272, lost, +0.196) was the second
+miss where the unrecorded recent-pace shade view would have won. The whole category agrees.
+Over 104 settled postcount forecasts, own minus mid is +0.0326. The gap is |gap|<0.10 n=70
++0.0101, >=0.10 n=34 +0.079, >=0.15 n=17 +0.142. Any blend weight on own is worse than the
+mid, and so is a +/-0.03 clip. Rule, for this category only (supersedes DEEP-2026-09-26 here):
+est_prob = CLOB mid. Write the bootstrap or pace read in the note as "mechanical read: X".
+Exception: a bracket the live count has already decided or nearly decided. Example: the count
+is already above the bracket top, or the bracket needs more posts than any base window
+produced. Such a row records the mechanical value. Revisit after 30 more settled postcount rows,
+using the noted mechanical reads as the test.
+
+**Brazil 2026: third right-ward poll miss; sub-judice retotalisation.** Rio governor R1: Ruas
+(PL) got 49.27 valid against final polls near 43, a miss of about +6. Paes 42.76. The earlier
+misses were Flavio nationally (+3.5) and the DF Senate pair. Garotinho's votes were held as
+sub judice. He withdrew his appeal, TSE retotalised on Oct 8, and Ruas won in R1 with 50.88.
+The market resolved No before the runoff. Paes rows `beee63a55370` 0.80 and `0fb692abd6cc`
+0.89 both sat at the mid. Rules:
+(a) In any Brazil 2026 race, a poll-based read carries a right-ward correction on the PL or
+bolsonarista candidate's share. It stays unvalidated-method (n=3).
+(b) If an R1 leader sits within 1.5pt of 50% valid and any candidate's votes are sub judice,
+re-read the winner market in the next FULL cycle. Retotalisation can decide the race without a
+runoff.
