@@ -9604,3 +9604,33 @@ settlement. Each retro that settles anchor-rule postcount rows appends to this t
 Running: n=4/30, mean -0.024 (all endgame, <=4h left). No change at n=4. If the count reaches
 >=10 endgame rows still favouring the mechanical read, propose widening the "nearly decided"
 exception to <=4h left (RETRO-20261016-1815).
+
+## 2026-10-17 00:20Z: GA rally rows settled; rally below-mid half-gap rule (RETRO-20261017-0020)
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| Trump GA rally "Tax" 25+ (`8fea7930d0c7`, WSV) | 0.65/0.785 | No | +0.090 (No @0.26, spread 0.09) | Yes | -5.00 |
+| Trump GA rally "Russia"/"Ukraine" (`bd77c5b0c70f`, OVV) | 0.45/0.615 | No | +0.150 (No @0.40) | Yes | -5.00 |
+
+Both vetoes saved $5. Totals (`core/counterfactual.py ledger`): OVV 261 rows, CF +$142.49 (was
++147.49); WSV 82 rows, CF -$54.29 (was -49.29).
+
+**Rally say-the-word, non-transcript-count reads BELOW the mid: record half-gap.** This applies to
+settled rally rows (say-the-word or trump-mention) whose note lacks `method=transcript-count` and
+whose own estimate was below the record mid:
+- n=49 over 8 rallies, sum dBrier **+0.850**.
+- Positive in 4/4 chronological folds (+0.054/+0.177/+0.086/+0.533) and in 5/8 rallies.
+- Blend weight on own: 1.0 gives +0.850, 0.5 gives +0.215, 0.25 gives +0.055. Any weight loses.
+- The same cut above the mid is -0.955 over n=30, so it is fine.
+- The Dalton GA rally added 7 below-mid rows, all said, +0.435.
+
+Rules:
+1. For a rally word market where a market-series, Laplace or judgment read (NOT transcript-count)
+   lands below the CLOB mid, record est_prob = mid - at most half of (mid - raw). Write the raw
+   value in the note as "series raw X".
+2. Above-mid reads and transcript-count rows: record raw, as before.
+3. No-side edge is computed from the recorded (half-gap) value, so most such No claims fall under
+   min_edge. That is the intent.
+4. Re-grade at the first retro after 3 more rallies settle, comparing half-gap rows to their raw
+   note values. If the raw reads would have beaten the mid there, revert. If the half-gap still
+   loses to the mid, move to record-the-mid (as the postcount rule did).
