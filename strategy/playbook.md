@@ -9685,3 +9685,14 @@ last leg re-states the family total (here: 2 open legs were missing from the 00:
 - Rule-4 count: 1 of 3 rallies. If rallies 2 and 3 also leave half-gap rows above the mid, move to
   record-the-mid. 3 KY legs are still open (AI, Fentanyl|Deport, Truck); re-state the family total
   when they settle.
+- KY WSV rows settled (counterfactual ledger; the vetoes saved $15):
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| Trump KY rally "Transgender" 5+ (`b1c593422955`, WSV, superseded raw) | 0.55/0.815 | No | +0.120 | Yes | -5.00 |
+| Trump KY rally "Transgender" 5+ (`015ee157546a`, WSV, half-gap) | 0.68/0.81 | No | +0.010 | Yes | -5.00 |
+| Trump KY rally "Hell" 15+ (`11642e29b9b3`, WSV, half-gap) | 0.48/0.56 | No | -0.080 | Yes | -5.00 |
+
+  Totals (`core/counterfactual.py ledger --skip-reason wide-spread-veto`): WSV 85 rows, 75
+  fillable, 38W/37L, CF -$69.29 (was -$54.29 at 00:20Z). Side split for these three: all No side,
+  0/3. OVV unchanged at 261 rows, +$142.49.
