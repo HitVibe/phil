@@ -9643,3 +9643,19 @@ below-mid non-transcript n=51, **+0.835** (Dalton 7/9 said, +0.420); above-mid n
 rule stands unchanged. **Family-grade rule:** a retro that grades a multi-leg event family before
 every leg has settled must state the number of legs still open, and the retro that settles the
 last leg re-states the family total (here: 2 open legs were missing from the 00:20Z n).
+
+## DEEP-2026-10-17 rulings
+
+- **Sensing: discovery query 6 `commodities-tag` (tag 101031).** On 10-16/17, 75% of the 3000
+  screener rows were sports, and commodity/stock questions were 54. A live scan (`--hours 336
+  --limit 800`) gave 65 commodities-tag candidates, all new. commodities (n=29, dBrier -0.038)
+  and commodities-touch (n=30, -0.012) are among the four n>=29 forecast cells that beat the
+  book. Touch-ladder rows from this query still follow the DEEP-2026-10-16 touch.py half-gap rule.
+  The mechanical-econ carve-out does NOT extend to commodity touches; those stay forecast-first.
+- **Hourly edits 10-16 06Z to 10-17 04Z: all KEEP.** The rally below-mid half-gap rule was
+  re-derived independently: rally rows, last record per market, non-transcript, below mid,
+  n=38, sum dBrier +0.447. That is the same sign as the hourly n=51 +0.835.
+- **Transcript-count tally, restated honestly:** n=42 settled rally rows, sum dBrier -0.333
+  (above-mid -0.206, below-mid -0.127). Ledger record 5/5. This is the only method that beats the
+  book on both sides. It comes from only 3 rallies (Ohio, Alaska, Arizona). No stake change until
+  >=6 rallies (proposal P7 asks for a separate edge class so score.py tracks it).

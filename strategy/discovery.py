@@ -79,4 +79,14 @@ def queries(now, min_end, horizon, args, protected):
         #    query 4.
         {**base, "_label": "mentions-tag", "tag_id": 100343,
          "order": "volume24hr", "ascending": "false"},
+
+        # 6. Commodities tag (DEEP-2026-10-17). commodities (n=29, dBrier
+        #    -0.038) and commodities-touch (n=30, -0.012) are two of the four
+        #    n>=29 forecast cells that beat the book, yet only ~54 of 3000
+        #    screener rows on 10-16/17 were stock/commodity questions (75% were
+        #    sports). tag 101031 = "commodities" (tags.py check: 88 live, WTI/
+        #    gold monthly HIGH/LOW ladders). No volume floor, same reason as
+        #    query 4. Touch rows still obey the DEEP-2026-10-16 half-gap rule.
+        {**base, "_label": "commodities-tag", "tag_id": 101031,
+         "order": "volume24hr", "ascending": "false"},
     ]

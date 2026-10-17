@@ -4288,3 +4288,18 @@ There are no new hourly proposals since DEEP-10-10.
 - **P4 funnel-line CI check: Status: PROPOSED, MEDIUM.** Unchanged.
 - **P1, P2, P3(a): Status: unchanged (PROPOSED).** The playbook is ~604KB.
 - There were no new hourly proposals in this window.
+
+## DEEP-2026-10-17 - deep-retro proposals and status
+
+- **P7 (operator, core/validate.py KNOWN_EDGE_CLASSES + ledger.py choices): add a
+  `transcript-count` edge class. Status: PROPOSED, LOW.** Transcript-count rally reads are the
+  only method beating the book on both sides (n=42 forecasts, sum dBrier -0.333; bets 5/5).
+  Today those bets are filed as `other`, so `score.py by_edge_class` cannot isolate them. This
+  is for tracking only. Real-twin eligibility (`real.allowed_edge_classes`) should wait for
+  n>=15 bets across >=6 rallies; today there are 3 rallies.
+- **P5: Status: PROPOSED, MEDIUM.** Unchanged.
+- **Subclass auto-tagger, P4, P1, P2, P3(a): Status: unchanged (PROPOSED).**
+- **Operator note (no proposal yet):** screener rows on 10-16/17 were 3000 over 879 unique
+  markets (~3.4 screens per market per day). If core/screen.py re-screens unchanged markets, a
+  re-screen-on-mid-move rule would free quota for the new commodities query.
+- There were no new hourly proposals in this window.
