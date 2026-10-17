@@ -9634,3 +9634,12 @@ Rules:
 4. Re-grade at the first retro after 3 more rallies settle, comparing half-gap rows to their raw
    note values. If the raw reads would have beaten the mid there, revert. If the half-gap still
    loses to the mid, move to record-the-mid (as the postcount rule did).
+
+## 2026-10-17 02:15Z: GA rally late settlers; half-gap evidence correction (RETRO-20261017-0215)
+
+Correction to the 00:20Z half-gap rule's evidence: two more Dalton below-mid rows (America First
+`131057f6e910`, Trump Account `128ace835ca2`) settled No after that retro. Corrected counts:
+below-mid non-transcript n=51, **+0.835** (Dalton 7/9 said, +0.420); above-mid n=32, -0.946. The
+rule stands unchanged. **Family-grade rule:** a retro that grades a multi-leg event family before
+every leg has settled must state the number of legs still open, and the retro that settles the
+last leg re-states the family total (here: 2 open legs were missing from the 00:20Z n).
