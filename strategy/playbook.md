@@ -9676,3 +9676,12 @@ last leg re-states the family total (here: 2 open legs were missing from the 00:
   (above-mid -0.206, below-mid -0.127). Ledger record 5/5. This is the only method that beats the
   book on both sides. It comes from only 3 rallies (Ohio, Alaska, Arizona). No stake change until
   >=6 rallies (proposal P7 asks for a separate edge class so score.py tracks it).
+
+## 2026-10-17 22:15Z: KY rally settled; half-gap re-grade tally rally 1/3 (RETRO-20261017-2215)
+
+- Half-gap rows, KY (Hormuz 110321cf3c51, Transgender 5+ 015ee157546a, Hell 15+ 11642e29b9b3):
+  recorded +0.067 vs raw +0.181 (n=3). Half-gap beat raw but still lost to the mid.
+- KY below-mid, all last records: n=5, +0.144. Above-mid: n=2, -0.234.
+- Rule-4 count: 1 of 3 rallies. If rallies 2 and 3 also leave half-gap rows above the mid, move to
+  record-the-mid. 3 KY legs are still open (AI, Fentanyl|Deport, Truck); re-state the family total
+  when they settle.
