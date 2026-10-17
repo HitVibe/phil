@@ -9600,8 +9600,22 @@ settlement. Each retro that settles anchor-rule postcount rows appends to this t
 | Trump Oct9-16 160-179 `e64e7adf9564` | 0.85/0.765 | 3.7h | Yes | -0.033 |
 | Musk Oct9-16 340-359 `00acf24ba4c2` | 0.87/0.8925 | 1.6h | Yes | +0.005 |
 | Trump Oct9-16 160-179 `b227ea26eff8` | 0.92/0.83 | 1.6h | Yes | -0.023 |
+| Musk Oct15-17 90-114 `42bad91e9738` | 0.54/0.56 | 23.7h | Yes | +0.018 |
+| Musk Oct15-17 90-114 `651b24e35063` | 0.15/0.45 | 19.7h | Yes | +0.420 |
+| Musk Oct15-17 115-139 `0b3972f78e66` | 0.45/0.3895 | 19.7h | No | +0.051 |
+| Musk Oct15-17 140-164 `c61b1c2fea22` | 0.35/0.098 | 19.7h | No | +0.113 |
+| Musk Oct15-17 90-114 `716a646a5a09` | 0.66/0.785 | 9.7h | Yes | +0.069 |
+| Musk Oct15-17 115-139 `115269598e9e` | 0.32/0.213 | 9.7h | No | +0.057 |
+| Musk Oct15-17 90-114 `9d7316dc479c` | 0.55/0.36 | 7.7h | Yes | -0.207 |
+| Musk Oct15-17 115-139 `8deb52d9cceb` | 0.44/0.603 | 7.7h | No | -0.170 |
+| Musk Oct15-17 90-114 `ae9f39474ae9` | 0.55/0.615 | 1.7h | Yes | +0.054 |
+| Musk Oct15-17 115-139 `b158ce5c1558` | 0.45/0.397 | 1.7h | No | +0.045 |
 
-Running: n=4/30, mean -0.024 (all endgame, <=4h left). No change at n=4. If the count reaches
+Running: n=4/30, mean -0.024 (all endgame, <=4h left). No change at n=4. RETRO-20261017-1815 update: +10 Musk
+Oct15-17 rows (stale-gamma `1cb4109b8d9d`/`4a4612201c1d` counted once via their corrections).
+Running n=14/30, sum +0.353, mean +0.025 (mid better). Endgame <=4h subset n=6, mean ~0.000: both
+new endgame rows favoured the mid, so the widening trigger below is not trending toward firing.
+The big miss (`651b24e35063`, 0.15 vs 0.45) was a late quiet-regime the base windows under-sample. If the count reaches
 >=10 endgame rows still favouring the mechanical read, propose widening the "nearly decided"
 exception to <=4h left (RETRO-20261016-1815).
 
