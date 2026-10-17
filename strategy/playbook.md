@@ -820,6 +820,9 @@ guard.
    on Argentina-BFA the haiku 0.18 divergence I dismissed scored better
    than both - track whether screener divergences on strong-favourite
    BTTS rows keep beating the self-model before trusting either (n=1).
+   2026-10-17 20:15Z (RETRO-20261017-2015): Betis-Barca BTTS hit; haiku
+   0.60-0.64 vs self-model 0.71 vs mid 0.725 -> haiku worst. Tally 1-1 (n=2),
+   no trust shift.
    **Cap tightened DEEP-2026-08-13: at most ONE sports devig confirmation
    sweep per WEEK per feed, as a drift spot-check.** The daily cap's own
    evidence condition is met and exhausted: mlb-spreads settled forecast
