@@ -9737,3 +9737,16 @@ last leg re-states the family total (here: 2 open legs were missing from the 00:
 - **Parcl NYC `3989eabf623a`.** The mark is 0.042 on a 0.005/0.079 book with $760 liquidity.
   The resolution text was re-verified on 10-18 (Parcl_ID 5372594, $/sqft x 1000). A
   placeholder-shaped mark is not a kill-switch event. Only a settled zero-crossing loss is.
+
+## 2026-10-18 16:15Z: AAA gas Oct18 WSV family settled (RETRO-20261018-1615)
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| AAA gas Oct18 4.29-4.2999 (`23f62eecefcd`, WSV) | 0.47/0.35 | Yes | +0.080 | Yes | +7.82 |
+| AAA gas Oct18 4.30-4.3099 (`e88c4535a758`, WSV) | 0.37/0.355 | Yes | -0.120 | No | -5.00 |
+| AAA gas Oct18 <4.29 (`475313a77007`, WSV) | 0.11/0.295 | No | +0.040 | No | +0.38 |
+
+  Totals (`core/counterfactual.py ledger --skip-reason wide-spread-veto`): WSV 88 rows, 78
+  fillable, 40W/38L, CF -$66.09 (was -$69.29; +7.82 - 5.00 + 0.38 = +3.20 ✓). Side split for
+  these three: Yes 1W/1L +2.82, No 1W/0L +0.38. Ruling: no boundary change; the drift model
+  (d~N(-1.0c,0.7c)) is n=1 and needs >=3 graded AAA days before a bet cites it.
