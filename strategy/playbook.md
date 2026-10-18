@@ -9711,3 +9711,5 @@ last leg re-states the family total (here: 2 open legs were missing from the 00:
   A judgment vol shade may pull it toward the mid but never below it. Evidence: BTC dip 81k
   Oct17 `6ec71958aca8`: raw 0.503, mid 0.10, recorded 0.07 on a realized-weekend-vol shade,
   touched, +0.055 vs 0.000 at the mid.
+  Second instance (RETRO-20261018-0415): BTC reach 82k Oct17 `579a19d2a642`, raw 0.672, mid
+  0.225, shaded to 0.20, touched, +0.039. Pre-rule record; floor now 2/2 (+0.094 combined).
