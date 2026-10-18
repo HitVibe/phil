@@ -9713,3 +9713,27 @@ last leg re-states the family total (here: 2 open legs were missing from the 00:
   touched, +0.055 vs 0.000 at the mid.
   Second instance (RETRO-20261018-0415): BTC reach 82k Oct17 `579a19d2a642`, raw 0.672, mid
   0.225, shaded to 0.20, touched, +0.039. Pre-rule record; floor now 2/2 (+0.094 combined).
+
+## DEEP-2026-10-18 rulings
+
+- **Tally-table placement.** Per-row shadow-tally and re-grade rows (anchor-rule postcount,
+  rally half-gap pairs, haiku-vs-self, touch.py floor) go in that tick's RETRO file. The
+  playbook keeps only a one-line running summary per tally: n, sum, mean, and whether the
+  trigger fired. Evidence: playbook.md went from 604KB (DEEP-2026-10-16) to 615KB in two days,
+  mostly from row tables (ac219c3a +10 Musk rows). A rule buried in 600KB gets missed: Truck
+  `5d0b11e5be6e` was recorded raw 16h after the half-gap rule existed. EXCEPTION: the WSV/OVV
+  counterfactual ledger table stays in-playbook per DEEP-2026-08-23, with its totals line
+  re-summed on every veto settlement.
+- **touch.py floor (4a1a2019): KEEP, forecast-recording only.** It rests on n=2 from a single
+  BTC weekend (`6ec71958aca8`, `579a19d2a642`, +0.094 combined). No bet may cite it until n>=8
+  across >=3 distinct weekends. crypto-touch forecasts overall are n=47, dBrier -0.003, at the
+  market.
+- **countable-metric Yes-bracket watch.** Three straight losses: `9b7c41da79ac`, `d5cfa982fa21`
+  and `38f9c08d4804`, entry 0.31-0.41, stated edge 0.05-0.07, -$15. The forecast cell beats the
+  book (n=80, -0.014), so this is insufficient data and no bar change. If the next 3 such bets
+  with stated edge <0.08 also lose, require edge >=0.08 for this subclass.
+- **Funnel screener string.** Write the day quota as N/150. The 10-18 00-04Z rows read
+  "day 30/15" and "day 45/15".
+- **Parcl NYC `3989eabf623a`.** The mark is 0.042 on a 0.005/0.079 book with $760 liquidity.
+  The resolution text was re-verified on 10-18 (Parcl_ID 5372594, $/sqft x 1000). A
+  placeholder-shaped mark is not a kill-switch event. Only a settled zero-crossing loss is.

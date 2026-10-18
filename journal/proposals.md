@@ -4303,3 +4303,16 @@ There are no new hourly proposals since DEEP-10-10.
   markets (~3.4 screens per market per day). If core/screen.py re-screens unchanged markets, a
   re-screen-on-mid-move rule would free quota for the new commodities query.
 - There were no new hourly proposals in this window.
+
+## DEEP-2026-10-18 - deep-retro proposals and status
+
+- **P5 (operator, core/score.py, report placeholder-mid rows separately): Status: PROPOSED,
+  MEDIUM.** It has a new live illustration: open bet `3989eabf623a` (Parcl NYC) is marked at
+  0.042 on a 0.005/0.079, $760 book. `open_mtm` shows -$4.13 unrealized from a book that
+  carries no information.
+- **Andersson `e746d7e1ba99`, open past its end date (2026-10-03 entries): Status: still
+  open.** The resolve.py void branch is still unreachable for this row.
+- **P7, subclass auto-tagger, P4, P1, P2, P3(a): Status: unchanged (PROPOSED).** The
+  playbook is 615KB. P1 matters more as it grows, and this retro moves per-row tallies out of
+  the playbook from the agent side.
+- There were no new hourly proposals in this window.
