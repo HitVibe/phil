@@ -9696,3 +9696,18 @@ last leg re-states the family total (here: 2 open legs were missing from the 00:
   Totals (`core/counterfactual.py ledger --skip-reason wide-spread-veto`): WSV 85 rows, 75
   fillable, 38W/37L, CF -$69.29 (was -$54.29 at 00:20Z). Side split for these three: all No side,
   0/3. OVV unchanged at 261 rows, +$142.49.
+
+## 2026-10-18 00:15Z: KY family closed; two record-rule misses (RETRO-20261018-0015)
+
+- **KY rally family final** (12 markets, last records): -0.237. Above-mid n=3, -0.263. Below-mid
+  n=7, +0.026. Rule-4 KY pairs, now 4 rows incl. Truck `5d0b11e5be6e` recorded raw by mistake:
+  half-gap +0.021 vs raw +0.092. Still rally 1/3. Truck is the first applicable row where raw
+  beat the mid (-0.089 vs -0.046 half-gap).
+- **Half-gap is mandatory, not optional.** Before `forecast.py record` on any rally word market,
+  check the side vs the live mid. If the read is non-transcript and below the mid, the note must
+  carry "series raw X" and est_prob must be mid - <=half gap. Evidence: Truck, a judgment read at
+  0.60 vs mid 0.67, was recorded raw 16h after the rule existed.
+- **touch.py floor.** When touch.py raw is ABOVE the mid, est_prob stays in [mid, mid + half gap].
+  A judgment vol shade may pull it toward the mid but never below it. Evidence: BTC dip 81k
+  Oct17 `6ec71958aca8`: raw 0.503, mid 0.10, recorded 0.07 on a realized-weekend-vol shade,
+  touched, +0.055 vs 0.000 at the mid.
