@@ -9902,3 +9902,15 @@ deadline" at >= 0.75. Shade down only for an explicit exclusion that covers the 
 resolution wording. Evidence: Lecornu asked prefects at ~10:30Z Oct19 for localized curfews
 "pour ce soir". I recorded 0.50/0.55 and the PP arrete followed the same afternoon. This is not
 a gate change: the fact-finality rule for the info-race exception stands. Grade this prior at n>=5.
+
+## 2026-10-19 22:15Z: Sense and Sensibility 7-8m WSV row settled (backfill, RETRO-20261019-2141 missed the table)
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| Sense and Sensibility OW 7-8m (`9505b185b7e8`, WSV, superseded by `36a5c5d371bc`) | 0.25/0.33 | No | +0.050 | Yes | -5.00 |
+
+  Totals (`core/counterfactual.py ledger --skip-reason wide-spread-veto`): WSV 98 rows, 84
+  fillable, 44W/40L, CF -$59.00 (was -$54.00; -5.00 ✓). Side split for this row: No 0W/1L
+  -5.00. Ruling: no boundary change; the row was a pre-tracking estimate later superseded
+  toward the book (box-office book-modal floor), and the veto saved $5. RETRO-20261019-2141
+  graded it narratively without the table row; reconcile.py flagged it.
