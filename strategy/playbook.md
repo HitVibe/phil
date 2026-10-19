@@ -9783,3 +9783,14 @@ larger shade still needs a positive fact (announced pause, ceasefire, confirmed 
 report). When the ask sits far below that anchor, record the gap honestly as a
 forecast-only Yes candidate (skip-reason `unvalidated-method`) until n>=5 rows settle
 under this anchor; a deep retro then decides whether it becomes a betting class.
+
+## 2026-10-19 08:15Z update: China Q3 GDP OVV row settled (FULL, RETRO-20261019-0815)
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| China Q3 GDP 4.3-4.6 first read (`2ae729db32f5`, OVV, superseded) | 0.55/0.335 (No) | No | +0.190 (No @0.36) | Yes | -5.00 |
+
+The veto saved $5. OVV tool totals (`core/counterfactual.py ledger --skip-reason
+outside-view-veto`): 262 rows, 254 trd, 104W/150L, +$137.49. This was a pre-consensus
+self-built nowcast, and the post-poll supersede (`cc9769b230bb`, 0.28 No) agreed with the
+market. No boundary change.
