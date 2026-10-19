@@ -9750,3 +9750,17 @@ last leg re-states the family total (here: 2 open legs were missing from the 00:
   fillable, 40W/38L, CF -$66.09 (was -$69.29; +7.82 - 5.00 + 0.38 = +3.20 ✓). Side split for
   these three: Yes 1W/1L +2.82, No 1W/0L +0.38. Ruling: no boundary change; the drift model
   (d~N(-1.0c,0.7c)) is n=1 and needs >=3 graded AAA days before a bet cites it.
+
+## 2026-10-19 00:15Z update: Kyiv Oct18 absence-fade rows settled Yes (FULL tick, RETRO-20261019-0015)
+
+**City-target absence cap re-anchored on the base rate (n=3, all Yes after absence shades:
+Kyiv `e5f7ac9f6cbd` Oct9, Moscow `236e5dd959fa` Oct15, Kyiv `d4914365f76b` Oct18).**
+On Oct18 my supersedes (0.84 -> 0.65 -> 0.50 -> 0.42) each stayed within 0.05 of a mid
+that was itself fading (0.845 -> 0.39) on no positive fact, and the market resolved Yes.
+The "mid or base rate, whichever is lower" clause let me inherit the market's fade.
+Replacement rule: while any evening/night hours of the local date remain, absence of a
+report shades at most **0.10 below the month's base rate**, independent of the mid. A
+larger shade still needs a positive fact (announced pause, ceasefire, confirmed calm-night
+report). When the ask sits far below that anchor, record the gap honestly as a
+forecast-only Yes candidate (skip-reason `unvalidated-method`) until n>=5 rows settle
+under this anchor; a deep retro then decides whether it becomes a betting class.
