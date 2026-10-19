@@ -9818,3 +9818,25 @@ market. No boundary change.
   three: Yes 1W/1L -3.15, No 1W/0L +0.43. Ruling: no boundary change. The AAA drift model is
   now at n=2 graded days: Oct18 hit, Oct19 centred one rung low (actual d/d -0.35c vs -1.0c
   mean). The >=3-day gate stands.
+
+## 2026-10-19 20:15Z: Paris curfew by-Oct19 WSV rows settled (RETRO-20261019-2015)
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| Paris curfew by Oct19 (`59b3a594afc7`, WSV, superseded) | 0.50/0.30 | Yes | +0.161 | Yes | +9.75 |
+| Paris curfew by Oct19 (`32614afd232d`, WSV, superseded) | 0.55/0.46 | Yes | +0.053 | Yes | +5.06 |
+
+  Totals (`core/counterfactual.py ledger --skip-reason wide-spread-veto`): WSV 97 rows, 83
+  fillable, 44W/39L, CF -$54.00 (was -$68.81; +9.75 + 5.06 = +14.81 ✓). Side split for these
+  two: Yes 2W/0L +14.81. Ruling: no boundary change. The PM directive was not the final fact
+  (the PP arrete was), so the info-race exception correctly stayed shut; the miss was my
+  estimate size.
+
+**Official-directive prior (RETRO-20261019-2015, n=1, forecast prior only).** When a head of
+government or minister says on the record that they have directed subordinate officials
+(prefects, governors, agencies) to take a dated action, with a same-day or next-day deadline,
+and the market's locality is named as a candidate, start "the subordinate act happens by the
+deadline" at >= 0.75. Shade down only for an explicit exclusion that covers the market's
+resolution wording. Evidence: Lecornu asked prefects at ~10:30Z Oct19 for localized curfews
+"pour ce soir". I recorded 0.50/0.55 and the PP arrete followed the same afternoon. This is not
+a gate change: the fact-finality rule for the info-race exception stands. Grade this prior at n>=5.
