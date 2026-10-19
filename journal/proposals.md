@@ -4316,3 +4316,27 @@ There are no new hourly proposals since DEEP-10-10.
   playbook is 615KB. P1 matters more as it grows, and this retro moves per-row tallies out of
   the playbook from the agent side.
 - There were no new hourly proposals in this window.
+
+## DEEP-2026-10-19 - deep-retro proposals and status
+
+- **P8 (operator, core/screen.py daily cap or CYCLE.md step 4): reconcile the screener cap
+  with the FULL cadence. Status: PROPOSED, LOW-MEDIUM.**
+  - DEEP-2026-10-02 put FULLs every 2h: 12 a day x 15 batches = 180, against a 150 cap. The
+    quota ran out at the 18:13Z FULL on both 10-17 and 10-18, so the 20Z and 22Z FULLs ran
+    unscreened.
+  - CYCLE.md runs the screener whenever quota remains, so the agent cannot choose which FULLs
+    go unscreened, and the DEEP-09-24 "45 batches until 16Z" reserve is unmeetable. The
+    agent side has marked it non-binding.
+  - Options: (a) a cap of 180; (b) let CYCLE.md step 4 skip the screener on the lowest-yield
+    window, 08-12Z (4 bets since 09-01, vs 8 at 20-24Z); (c) the 10-17 re-screen-on-mid-move
+    idea, which frees quota without raising spend.
+  - Evidence that the lost screening cost bets is **weak**: the unscreened 22Z FULL still
+    placed `0835bb544870`. So this is LOW-MEDIUM, not HIGH.
+- **P5 (placeholder-mid rows): Status: PROPOSED, MEDIUM.** It has a fifth illustration:
+  Charlotte tornado `4936d9c04b32` (a no-ask row, "market" 0.051) is -0.900 of the 24h raw
+  sum of -1.32.
+- **P4 (funnel-line CI check): Status: PROPOSED, MEDIUM.** The 10-18 16:30Z and 18:30Z
+  FULLs wrote no funnel row, and both were backfilled later without pool counts.
+- **P7, subclass auto-tagger, P1, P2, P3(a): Status: unchanged (PROPOSED).** The Andersson
+  `e746d7e1ba99` void-branch issue is still open.
+- There were no new hourly proposals in this window.

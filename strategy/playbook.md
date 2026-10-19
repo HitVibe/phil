@@ -9738,6 +9738,25 @@ last leg re-states the family total (here: 2 open legs were missing from the 00:
   The resolution text was re-verified on 10-18 (Parcl_ID 5372594, $/sqft x 1000). A
   placeholder-shaped mark is not a kill-switch event. Only a settled zero-crossing loss is.
 
+## DEEP-2026-10-19 rulings
+
+- **Parcl NYC `3989eabf623a`: re-estimate, not a misread.** The live index (parcl_season.py
+  5372594) is 628.32 on 10-18, down from 671.37 at entry and 680 on 9-29: -7.6% in 18 days,
+  the fastest decline in the 2020-26 series. Yes needs no further -18.8% in 74 days. The
+  historical Oct->Dec31 moves run -9.7% to +7.7%, and the worst 91-day move is -11.9%. The
+  honest estimate is ~0.88-0.92, not 0.98. DEEP-10-18's "book carries no information" was
+  too strong. TRIGGER: if the index prints <580 before Dec 1, write a re-estimate in that
+  tick's retro and grade the Parcl-Dec31 family rule against it. There is no exit, because
+  there is no bid.
+- **Kyiv/Moscow absence cap (781ebcdb): KEEP.** It anchors on the base rate, not the fading
+  mid. It rests on n=3, all Yes, and stays forecast-only until n>=5.
+- **Kansas rally pair `0835bb544870` / `0800db938df9`: compliant** (the $10 event cap was hit
+  exactly). Both are Yes buys on a 3-4-rally Laplace base. At settlement, grade them against
+  the transcript-count cell, the only rally method with a record. If both lose, Yes-side
+  say-the-word bets with a base of <5 comparable rallies need edge >=0.08.
+- **GTA VI watch item:** apply the DEEP-2026-09-07 rolling-log compaction at the next
+  checkpoint, keeping the first, the latest and the threshold-crossing checkpoints only.
+
 ## 2026-10-18 16:15Z: AAA gas Oct18 WSV family settled (RETRO-20261018-1615)
 
 | Row | own/mkt | Side | Edge | Result | CF pnl |
