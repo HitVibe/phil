@@ -3061,6 +3061,14 @@ The rule kept me off the No side at 0.059 (CF -5.00), but my 0.90 shading
 still lost dBrier to the market's 0.967 (+0.009). When trough-only pace
 already lands mid-bracket, sit near the market rather than shading toward
 the tail the trough cannot tell you about.
+Third settled instance (RETRO-20261019-1815, MrBeast RE3_PGwDwhw day2
+92-96M): the 10:18Z read projected the 08-10Z acceleration and leaned
+96-100 at 0.33 vs ask 0.28; the rule kept me off it (CF -5.00, saved).
+The 12:20Z read centred 93.6-94.3M inside 92-96, yet I shaded 0.93 vs
+the market's 0.99 (+0.005 dBrier, all four rows lost to the mid).
+Concrete form of "sit near the market": when the projected centre is at
+least 1.5 sd inside both bracket edges, own p on that rung stays within
+0.03 of the mid unless a fresh read shows a pace break.
 
 **2026-09-04 update (LIGHT tick 06:29Z, settled by resolve.py; 4 rows,
 two OpenAI Astra release-timeline markets, two sequential snapshots
