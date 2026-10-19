@@ -9794,3 +9794,19 @@ The veto saved $5. OVV tool totals (`core/counterfactual.py ledger --skip-reason
 outside-view-veto`): 262 rows, 254 trd, 104W/150L, +$137.49. This was a pre-consensus
 self-built nowcast, and the post-poll supersede (`cc9769b230bb`, 0.28 No) agreed with the
 market. No boundary change.
+
+## 2026-10-19 16:15Z: USGS Oct12-18 '9'/'11' and AAA gas Oct19 WSV rows settled (RETRO-20261019-1615)
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| USGS Oct12-18 '9' (`61041f1fa740`, WSV, superseded) | 0.79/0.425 | Yes | +0.060 | Yes | +1.85 |
+| USGS Oct12-18 '11' (`c3687408ff64`, WSV; omitted at 14:20Z) | 0.04/0.11 | No | +0.040 | No | +0.43 |
+| AAA gas Oct19 4.28-4.2899 (`b98abc454d1c`, WSV) | 0.48/0.355 | Yes | -0.220 | No | -5.00 |
+
+  The AAA Oct19 rows `98cb46cebf3a`, `acc1f38883d7`, `cf0bcd06c84c` and `c390ab996683` were
+  refused because their entries fell outside [0.02, 0.95], so they are not trades. Totals
+  (`core/counterfactual.py ledger --skip-reason wide-spread-veto`): WSV 95 rows, 81 fillable,
+  42W/39L, CF -$68.81 (was -$66.09; +1.85 + 0.43 - 5.00 = -2.72 ✓). Side split for these
+  three: Yes 1W/1L -3.15, No 1W/0L +0.43. Ruling: no boundary change. The AAA drift model is
+  now at n=2 graded days: Oct18 hit, Oct19 centred one rung low (actual d/d -0.35c vs -1.0c
+  mean). The >=3-day gate stands.
