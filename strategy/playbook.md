@@ -6940,6 +6940,23 @@ Both forecast-only (f4b1ecd5d257, 0096c34309c9), fitted-sigma bar still at
 not yet settled. Grade at settlement (~2026-10-14 03:00Z-ish, first pitch
 2026-10-14T00:00Z + game length).
 
+**GRADED late (2026-10-19 21:xxZ cycle, picked up while researching the
+Oct19 CLE@TB rematch below — this grading was missed at the time):**
+actual total landed at or under 5 (both the 7.5-Over and 5.5-Over legs
+settled Under). 7.5 leg: model 0.4516 vs mkt-mid 0.42, dBrier (model−mkt)
++0.0275 (model slightly worse). 5.5 leg: model 0.5809 vs mkt-mid 0.635,
+dBrier −0.0658 (model notably better — the market was more confidently
+wrong than the model on this leg). Average leg dBrier for the game:
+**−0.0192 (favorable, model beat market net)**. Direction-of-miss:
+model-high on both legs (fitted mu=6.75, actual total materially below
+it) — same direction as the SD@COL model-high miss, reinforcing the
+pre-registered right-skew-overstatement concern even on a game where the
+average dBrier came out favorable (the model was less wrong than the
+market, not right). **Fitted-sigma tally now 3/6 games**: SD@COL
+unfavorable (+0.0761, model-high), BOS@NYY ~neutral (+0.0071, hit),
+CLE@TB-Oct13 favorable (−0.0192, model-high). Bar still not met; 3 more
+independent games needed.
+
 **Dog -1.5 decay-ratio cross-market extrapolation, second use (same
 cycle):** the Guardians(-1.5) spread market is the underdog's alt line —
 structurally benchmark-unreachable by direct devig (2026-08-06 finding
@@ -6958,6 +6975,21 @@ only until n>=5 independent games settle with this exact r-transfer
 method, graded same as the totals Normal-fit (direction-of-miss tally,
 since r borrowed from the favorite's distribution could systematically
 mis-scale the dog's).
+
+**GRADED late (2026-10-19 21:xxZ, picked up alongside the fitted-sigma
+grading above — also missed at the time):** Guardians did not cover -1.5
+(Rays won the spread market too). Model 0.287 vs mkt-mid 0.31, both vs
+actual 0: model brier 0.0824, market brier 0.0961, dBrier −0.0137
+(slightly favorable — model closer to the outcome, consistent with the
+model also leaning Rays-side here even though its claimed edge was
+tiny/negative). Re-checking the first instance (LAD-MIL, `ee9b886749ca`)
+while grading this one: est 0.29 vs mkt-mid 0.29 — those were identical,
+so its dBrier is exactly 0 (a wash, not favorable; it was recorded
+`market-agrees`, not a real divergence test of the method at all).
+**r-transfer tally now 2/2 settled: LAD-MIL neutral (dBrier 0, no real
+divergence to grade), CLE-TB-Oct13 slightly favorable (−0.0137).** No
+evidence against the method yet, but n=2 and only one of those two
+actually tested it — nowhere near the n>=5 bar. Still forecast-only.
 
 **Third candidate instance, imported-sigma, NOT yet tallied (2026-10-13
 01:5xZ TRIGGERED cycle):** MIL@LAD (Oct 14), two new PM markets
@@ -6978,6 +7010,28 @@ near-line case never clears min_edge" read without needing the n>=6
 fitted-sigma bar to resolve it.
 Graded RETRO-20261015-0415: run total 7-8 vs mu 7.42 (hit), leg dBrier
 +0.022/-0.006 (avg +0.008, at market); near-line/no-edge again, as predicted.
+
+**Fifth candidate instance, fitted-sigma genre, first INTERPOLATION case
+(2026-10-19 21:4xZ TRIGGERED cycle):** CLE@TB again (Oct 19, a rematch of
+the Oct13-14 game above — same two teams, new game, new market id
+5940380), single new PM market O/U7.5 fired the watcher on creation,
+~2.5h before first pitch (2026-10-20T00:08Z). Books split 6.5 (4 books:
+fanduel/bovada/betonlineag/lowvig) and 7.0 (5 books:
+betrivers/mybookieag/betmgm/draftkings/betus) — power-devig averages
+P(Over6.5)=0.5386, P(Over7.0)=0.4793. Fit Normal(mu=6.83, sigma=3.36) to
+those two points. Unlike every prior fitted/imported-sigma instance, PM's
+line (7.5) sits **between** the two anchor lines rather than outside
+them — this is interpolation, not extrapolation, so the right-skew
+overstatement risk the bar was written to catch (which bites hardest
+reading far below the fitted mean) should be smaller here. Model
+P(Over7.5)=0.4205 vs PM ask 0.41/bid 0.39 (mid 0.40) — edge ~0.01-0.02 at
+ask, below min_edge 0.04 regardless of the method's validation status.
+Recorded forecast-only, skip-reason no-edge (`9c0ded05716b`). Grade at
+settlement (~2026-10-20 03:00Z-ish, first pitch + game length); this adds
+a 4th fitted-sigma candidate to the tally (3/6 graded, this one pending)
+and is the first instance that can test whether interpolation reads are
+better-behaved than the extrapolation reads that have driven the
+model-high bias so far.
 
 ## Mech second opinions: request sequencing and what the pair showed (2026-09-07 08:0xZ)
 
