@@ -4565,6 +4565,14 @@ would have COST here: <5M floored at 0.625 and 5-7M rescaled to ~0.32 at
 that the book is right: when the press centre is a studio Sat-AM figure
 already built on Friday actuals, note that in the row. Box-office forecasts
 n=42, sum dBrier +0.217, mean +0.0052. Still no-bet.
+Tally (RETRO-20261019-2215, evidence `67b2e0620a7c`): Street Fighter OW
+30-33M ("tighter brackets" duplicate market) recorded 0.71 vs mid 0.85, WON,
+dBrier +0.062. Two rules were skipped in the note: sd 1.2 was used on a
+Sat-AM figure built on Friday actuals (cap is sd <= 1.0M -> 0.77), and the
+book-modal floor was applied to the coarse 30-35M ladder only, not to the
+30-33M market (own mid 0.85 -> floor 0.75). Clarification: the floor and
+the sd cap apply to EVERY bracket ladder recorded in a note, including
+tighter-bracket duplicates, each against its own book mid. Still no-bet.
 
 **2026-09-22 ~18:15Z update (FULL cycle, cloud; resolve.py settled 14
 forecasts, 2 `outside-view-veto`).** Both rows are the Trump x Greenland
