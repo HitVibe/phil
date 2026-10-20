@@ -9946,12 +9946,11 @@ a gate change: the fact-finality rule for the info-race exception stands. Grade 
   255 trd, 105W/150L, CF +$140.07 (was 262 rows +$137.49; +2.58 ✓). Side split for this
   row: Yes 1W/0L +2.58. Ruling: no boundary change; the veto cost $2.58 on one row.
 
-  **Say-the-word thin-base shading (evidence: bets 0835bb544870 + 0800db938df9, one KS
-  event, -$10 net).** When a say-the-word bet's base rate comes from <=4 comparable
-  rallies (market-series resolutions rather than 5+ factbase transcripts), shade the
-  estimate halfway toward the current mid BEFORE checking min_edge, and say "thin-base
-  shaded" in the rationale. Both KS bets were 2/4 and 2/3 Laplace-shaded estimates and
-  were the batch's two worst dBrier rows (+0.092, +0.051); the 5+-transcript rows on the
-  same slate matched or beat the market. Cross-rally calibration is otherwise fine (since
-  2026-09-20: hits vs summed est TX 16/13.1, OH 11/9.7, KY 9/7.7, KS 2/5.4), so this is a
-  base-rate-thinness rule, not a category retreat. Grade at n>=10 thin-base bets.
+  **ENACTED (pre-registered DEEP-2026-10-19 trigger fired): Yes-side say-the-word bets with a
+  base of <5 comparable rallies need edge >=0.08** (vs min_edge 0.04). The KS pair
+  0835bb544870 + 0800db938df9 (2/4 and 2/3 market-series Laplace bases) BOTH lost (-$10 net, one
+  event) and were the 04:15Z batch's two worst dBrier rows (+0.051, +0.092). Cross-rally
+  calibration is otherwise fine (since 2026-09-20, hits vs summed est: TX 16/13.1, OH 11/9.7,
+  KY 9/7.7, KS 2/5.4), so this is a base-thinness floor, not a category retreat. Base counts come
+  from closed gamma Mentions-tag (tag_id 100343) rally slates: 14 settled Oct midterm rallies are
+  available as of 2026-10-20, so most staple words now clear n>=5. Grade at n>=10 thin-base bets.
