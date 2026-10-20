@@ -10018,3 +10018,9 @@ before AAA's ~08:15Z print.
 
 - Anchor-rule shadow tally: n=22/30, sum +0.338, mean +0.015 (`0a94a3226b08` <40 at 0.10 vs
   mid 0.053 resolved No, +0.007). Mid still better. No rule change before n=30.
+
+## 2026-10-20 22:15Z: UCL Barca/Roma + CS2 PARIVISION forecasts settled (RETRO-20261020-2215)
+
+- Three non-postcount forecasts, combined -0.028 vs mid (devig market-agrees UCL pair -0.004;
+  no-benchmark esports row -0.024, n=1, stays forecast-only). The anchor-rule tally is
+  unchanged at n=22/30. No rule change.
