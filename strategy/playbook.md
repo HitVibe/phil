@@ -10013,3 +10013,8 @@ before AAA's ~08:15Z print.
   resolved on the tracker's low frozen-branch bracket (320-339); no backfill before settlement
   (n=1). Open Musk ladders whose window overlaps the outage: check `lastSyncError` before any
   read, and treat a frozen count as a resolution risk, not as missing data.
+
+## 2026-10-20 20:15Z: Musk Oct19-21 <40 and Phoenix rain settled (RETRO-20261020-2015)
+
+- Anchor-rule shadow tally: n=22/30, sum +0.338, mean +0.015 (`0a94a3226b08` <40 at 0.10 vs
+  mid 0.053 resolved No, +0.007). Mid still better. No rule change before n=30.
