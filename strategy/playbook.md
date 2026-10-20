@@ -9922,3 +9922,16 @@ a gate change: the fact-finality rule for the info-race exception stands. Grade 
   -5.00. Ruling: no boundary change; the row was a pre-tracking estimate later superseded
   toward the book (box-office book-modal floor), and the veto saved $5. RETRO-20261019-2141
   graded it narratively without the table row; reconcile.py flagged it.
+
+## 2026-10-20 02:15Z: Tesla Roadster 0-60 <1s WSV row settled (RETRO-20261020-0215)
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| Roadster 0-60 <1s (`5fc8b459fa2d`, WSV) | 0.30/0.315 | No | +0.090 | Yes | -5.00 |
+
+  Totals (`core/counterfactual.py ledger --skip-reason wide-spread-veto`): WSV 99 rows, 85
+  fillable, 44W/41L, CF -$64.00 (was -$59.00; -5.00 ✓). Side split for this row: No 0W/1L
+  -5.00. Ruling: no boundary change; the veto saved $5. Observation (n=2 Roadster rows, both
+  same direction, not a rule): a company's pre-teased reveal-event stunt/spec claim is usually
+  staged and announced, and resolves on the company's claim unless the rules demand
+  independent measurement. Grade at n>=5.
