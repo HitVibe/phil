@@ -10002,3 +10002,14 @@ bin-level edge against a fair book. Rule: AAA next-day bin rows stay forecast-on
 with sd >= 1.0c around the trend-drift centre. No bet cites the model. Reopen it only if a
 deep retro finds a better input, such as the GasBuddy/OPIS intraday station average published
 before AAA's ~08:15Z print.
+
+## 2026-10-20 18:15Z: Musk Oct13-20 ladder settled (320-339) (RETRO-20261020-1815)
+
+- Anchor-rule shadow tally: n=21/30, sum +0.331, mean +0.016 (mid still better; endgame n=7
+  still favours the mid). Rows in the retro. No rule change before n=30.
+- The six Oct19-20 rows were recorded off-mid, violating the 10-16 anchor rule. Postcount
+  rows record est_prob = mid unless the bracket is decided; the read goes in the note.
+- xtracker outage: the `elonmusk` sync has `lastSyncError` (still failing 10-20 18:10Z). Oct13-20
+  resolved on the tracker's low frozen-branch bracket (320-339); no backfill before settlement
+  (n=1). Open Musk ladders whose window overlaps the outage: check `lastSyncError` before any
+  read, and treat a frozen count as a resolution risk, not as missing data.
