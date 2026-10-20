@@ -9935,3 +9935,23 @@ a gate change: the fact-finality rule for the info-race exception stands. Grade 
   same direction, not a rule): a company's pre-teased reveal-event stunt/spec claim is usually
   staged and announced, and resolves on the company's claim unless the rules demand
   independent measurement. Grade at n>=5.
+
+## 2026-10-20 04:15Z: KS rally Oct19 settled; SI OVV row + thin-base shading note (RETRO-20261020-0415)
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| KS rally "SI"/"Super Intelligence" (`a2122e66bb9a`, OVV) | 0.78/0.64 | Yes | +0.120 | Yes | +2.58 |
+
+  Totals (`core/counterfactual.py ledger --skip-reason outside-view-veto`): OVV 263 rows,
+  255 trd, 105W/150L, CF +$140.07 (was 262 rows +$137.49; +2.58 ✓). Side split for this
+  row: Yes 1W/0L +2.58. Ruling: no boundary change; the veto cost $2.58 on one row.
+
+  **Say-the-word thin-base shading (evidence: bets 0835bb544870 + 0800db938df9, one KS
+  event, -$10 net).** When a say-the-word bet's base rate comes from <=4 comparable
+  rallies (market-series resolutions rather than 5+ factbase transcripts), shade the
+  estimate halfway toward the current mid BEFORE checking min_edge, and say "thin-base
+  shaded" in the rationale. Both KS bets were 2/4 and 2/3 Laplace-shaded estimates and
+  were the batch's two worst dBrier rows (+0.092, +0.051); the 5+-transcript rows on the
+  same slate matched or beat the market. Cross-rally calibration is otherwise fine (since
+  2026-09-20: hits vs summed est TX 16/13.1, OH 11/9.7, KY 9/7.7, KS 2/5.4), so this is a
+  base-rate-thinness rule, not a category retreat. Grade at n>=10 thin-base bets.
