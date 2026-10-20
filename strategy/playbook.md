@@ -9983,3 +9983,22 @@ a gate change: the fact-finality rule for the info-race exception stands. Grade 
   day is +0.037, which is at the market. Never cite a raw daily sum that includes a no-ask row
   as evidence of edge (P5).
 
+
+## 2026-10-20 16:15Z: AAA gas Oct20 WSV rows settled; drift model fails its 3-day gate (RETRO-20261020-1615)
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| AAA gas Oct20 4.30-4.3099 (`93c154f9933d`, WSV) | 0.05/0.09 | No | ~0 | No | +0.27 |
+
+  `d7963b2c68fc` (4.29 bin, 0.40) and `a88861ab7d23` (4.31 bin, 0.01) were refused because
+  their entries fell outside [0.02, 0.95], so they are not trades. Totals (`core/counterfactual.py
+  ledger --skip-reason wide-spread-veto`): WSV 102 rows, 86 fillable, 45W/41L, CF -$63.73 (was
+  -$64.00; +0.27 ✓). Side split: No 1W/0L +0.27. No boundary change.
+
+**AAA daily drift model: gate failed at n=3 (Oct18 hit, Oct19 one rung low, Oct20 one rung
+high; centre errors ~0.0c / 0.65c / 0.98c).** The model used sd 0.6-0.7c, but the graded
+errors imply sd >= ~1.0c. At that sd no 1-cent bin reaches ~0.40, so the model has no
+bin-level edge against a fair book. Rule: AAA next-day bin rows stay forecast-only, priced
+with sd >= 1.0c around the trend-drift centre. No bet cites the model. Reopen it only if a
+deep retro finds a better input, such as the GasBuddy/OPIS intraday station average published
+before AAA's ~08:15Z print.
