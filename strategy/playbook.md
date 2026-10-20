@@ -4573,6 +4573,14 @@ book-modal floor was applied to the coarse 30-35M ladder only, not to the
 30-33M market (own mid 0.85 -> floor 0.75). Clarification: the floor and
 the sd cap apply to EVERY bracket ladder recorded in a note, including
 tighter-bracket duplicates, each against its own book mid. Still no-bet.
+Tally (RETRO-20261020-0015, evidence `dec2436888e4`, `8d2ceddf0083`,
+`81ffde79e0d2`, `06983792d928`, `dc8bff937fef`): Street Fighter OW landed
+30-35M, the book's modal bracket at both record times. 5 coarse-ladder rows
+net dBrier +0.226 (event incl. 67b2e0620a7c: +0.288 over 6 rows). Fri-update
+rows centred on the low end of Deadline's "30M, maybe 30M+" (centre on the
+bracket edge, 50/50 split); Sat-AM rows used sd 1.2 over the 1.0M cap. Floor
+record: helped 3, hurt 1 (frozen; no re-tune). Box-office forecasts n=48.
+Still no-bet.
 
 **2026-09-22 ~18:15Z update (FULL cycle, cloud; resolve.py settled 14
 forecasts, 2 `outside-view-veto`).** Both rows are the Trump x Greenland
