@@ -9799,9 +9799,8 @@ last leg re-states the family total (here: 2 open legs were missing from the 00:
   playbook keeps only a one-line running summary per tally: n, sum, mean, and whether the
   trigger fired. Evidence: playbook.md went from 604KB (DEEP-2026-10-16) to 615KB in two days,
   mostly from row tables (ac219c3a +10 Musk rows). A rule buried in 600KB gets missed: Truck
-  `5d0b11e5be6e` was recorded raw 16h after the half-gap rule existed. EXCEPTION: the WSV/OVV
-  counterfactual ledger table stays in-playbook per DEEP-2026-08-23, with its totals line
-  re-summed on every veto settlement.
+  `5d0b11e5be6e` was recorded raw 16h after the half-gap rule existed. (The WSV/OVV table
+  exception granted here was REVOKED by DEEP-2026-10-20; see that section at the end of file.)
 - **touch.py floor (4a1a2019): KEEP, forecast-recording only.** It rests on n=2 from a single
   BTC weekend (`6ec71958aca8`, `579a19d2a642`, +0.094 combined). No bet may cite it until n>=8
   across >=3 distinct weekends. crypto-touch forecasts overall are n=47, dBrier -0.003, at the
@@ -9954,3 +9953,29 @@ a gate change: the fact-finality rule for the info-race exception stands. Grade 
   KY 9/7.7, KS 2/5.4), so this is a base-thinness floor, not a category retreat. Base counts come
   from closed gamma Mentions-tag (tag_id 100343) rally slates: 14 settled Oct midterm rallies are
   available as of 2026-10-20, so most staple words now clear n>=5. Grade at n>=10 thin-base bets.
+
+## DEEP-2026-10-20 rulings
+
+- **WSV/OVV per-row tables leave the playbook (revokes the DEEP-2026-08-23 / DEEP-10-18
+  exception).** From now on, a veto settlement writes its `| Row | own/mkt | ... |` table rows
+  in that tick's RETRO file only. The playbook gets at most ONE line per settlement batch:
+  the `core/counterfactual.py ledger --skip-reason <reason>` totals (rows, W/L, CF pnl, delta)
+  plus any boundary change, and only when a rule changes does it get more. Evidence: the
+  playbook is 631KB / 9,956 lines (396KB on 09-22, 522KB on 10-06, 615KB on 10-18). It grew
+  +171 lines in the 24h to 10-20 04:22Z, 21 of them table rows. The tables duplicate a protected
+  tool: counterfactual.py reproduces the totals directly (WSV 99 rows, 44W/41L, CF -$64.00;
+  OVV 263 rows, 105W/150L, CF +$140.07 on 10-20). A Sonnet tick cannot read 631KB, so
+  per-row bookkeeping there only buries the rules it does need.
+- **<5-rally Yes say-the-word edge>=0.08 floor (c271e2c1): KEEP.** It is the pre-registered
+  DEEP-10-19 trigger, fired by the KS pair `0835bb544870` / `0800db938df9` (both lost, -$10).
+  **Sharpened:** the comparable count n is every settled same-speaker rally market since
+  2026-09-20 that LISTED the phrase, stated as k/n. Do not truncate to "last N" rallies. If a
+  rally did not list the phrase, it does not count either way. This stops a base from being
+  window-shopped to just over 5. The first post-rule bet, `d65107d4d97b` AI Yes @0.29
+  (2/6, Laplace 0.375 -> 0.35, edge 0.06), is compliant as stated. At settlement, re-check
+  that 6 was the full listed count.
+- **Placeholder-mid forecast rows again.** AAA gas `fb8301796308` (est 0.97, "market" 0.02,
+  no ask) is -0.959 of the 24h raw forecast dBrier sum of -0.922 (58 rows). Excluding it, the
+  day is +0.037, which is at the market. Never cite a raw daily sum that includes a no-ask row
+  as evidence of edge (P5).
+

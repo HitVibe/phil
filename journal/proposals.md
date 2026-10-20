@@ -4340,3 +4340,13 @@ There are no new hourly proposals since DEEP-10-10.
 - **P7, subclass auto-tagger, P1, P2, P3(a): Status: unchanged (PROPOSED).** The Andersson
   `e746d7e1ba99` void-branch issue is still open.
 - There were no new hourly proposals in this window.
+
+## DEEP-2026-10-20 - deep-retro proposals and status
+
+- No new hourly proposals in this window.
+- **P5 (placeholder-mid rows): Status: PROPOSED, MEDIUM.** Sixth illustration: AAA gas
+  `fb8301796308` (no ask, "market" 0.02, est 0.97) is -0.959 of a 24h raw forecast dBrier sum
+  of -0.922 over 58 rows. It flips the sign of the day, which is +0.037 without it.
+- **P8 (screener cap vs FULL cadence): Status: PROPOSED, LOW-MEDIUM.** The quota was
+  exhausted at the 18:12Z FULL on 10-19 again, and the 20Z and 22Z FULLs ran unscreened.
+- **P4, P7, subclass auto-tagger, P1, P2, P3(a): Status: unchanged (PROPOSED).**
