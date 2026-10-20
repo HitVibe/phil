@@ -9699,6 +9699,10 @@ new endgame rows favoured the mid, so the widening trigger below is not trending
 The big miss (`651b24e35063`, 0.15 vs 0.45) was a late quiet-regime the base windows under-sample. If the count reaches
 >=10 endgame rows still favouring the mechanical read, propose widening the "nearly decided"
 exception to <=4h left (RETRO-20261016-1815).
+RETRO-20261020-0814 update: +1 Trump Oct13-20 160-179 `a80f341ee649` (mech 0.83 vs mid 0.765, 13.7h left,
+lost, +0.109). Running n=15/30, sum +0.462, mean +0.031 (mid better); endgame subset unchanged n=6.
+Trump Truth Social weekly brackets are social-media-postcount, not countable-metric: that row was
+mislabelled and so sat outside this cell and the anchor rule by name. Use the postcount category.
 
 ## 2026-10-17 00:20Z: GA rally rows settled; rally below-mid half-gap rule (RETRO-20261017-0020)
 
