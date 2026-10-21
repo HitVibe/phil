@@ -5597,6 +5597,17 @@ gate-1-compatible adjustment; substituting a recalled-from-memory SD for
 the market's implied one is not, and should not be treated as
 "benchmarked" just because the mean half of the same model is sourced.
 
+**Gate-2 sixth line, UK Sep-2026 CPI (RETRO-20261021-0815):** three
+forecast-only YoY bracket rows shared a sourced consensus mean (3.4%) and a
+from-memory dispersion (2025 UK consensus misses), with a +0.03 shade toward
+the market's up-skew. ONS print 3.5% (0.4% m/m vs 0.3% consensus; motor
+fuels). Net own dBrier vs mid +0.062: 3.4-3.6 0.62 vs 0.64 (+0.015), 3.1-3.3
+0.27 vs 0.10 (+0.063), 3.7-3.9 0.08 vs 0.15 (-0.016). The loss sits in the
+DOWNSIDE tail the market had already priced thin; the market's up-skew
+(fuel prices public before the release) was information, not noise, and a
++0.03 shade under-weighted it. Gate 2 stands; on a skewed UK/US CPI ladder,
+move the mean toward the skew rather than shading by a token amount.
+
 **2026-08-21 update (18:11Z settlement): the Aug14-21 Musk weekly set's
 two >0.10-disagreement legs both settled, both LOST.** 240-259
 (cd3af116ed2a, No side, bid 0.252 vs est 0.16) lost to the actual count
