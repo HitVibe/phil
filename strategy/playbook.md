@@ -10024,3 +10024,14 @@ before AAA's ~08:15Z print.
 - Three non-postcount forecasts, combined -0.028 vs mid (devig market-agrees UCL pair -0.004;
   no-benchmark esports row -0.024, n=1, stays forecast-only). The anchor-rule tally is
   unchanged at n=22/30. No rule change.
+
+## 2026-10-21 00:15Z: Netflix post-event rows + PSG settled (RETRO-20261021-0015)
+
+- **Placeholder-mid rows leave the side-split tally.** The 7 post-event Netflix no-ask
+  rows (`8e078b5b7846`..`3fd3b316b7ad`, transcript 0 hits, all No) went 7/7 and scored
+  -3.675 vs mid, but each mid was a lone stale Yes ask. Rule: rows whose
+  `best_bid_at_record` is null (mid = lone ask) are reported separately and never counted in
+  the transcript-count side-split tally or any category dBrier skill claim. Clean tally:
+  above-side n=9 sum -0.146 (fires at 10); No-side n=19 sum -0.157.
+- World Cup `e8f13aa9ba10` (pre-event judgment, no base rate, 0.55 vs 0.61) resolved Yes,
+  +0.050; PSG devig market-agrees -0.006. No other change.
