@@ -6224,6 +6224,20 @@ transcript (rally speeches especially — official Fed transcripts are
 cleaned and don't show this), sweep constituent words in addition to
 the exact n-gram before concluding a term is absent.
 
+**Method note (2026-10-21): the base rate must be unselected.** The
+two-transcript minimum is met only by the speaker's MOST RECENT
+CONSECUTIVE comparable events (no skipped calls/rallies in between), or
+by a market-series of closed sibling markets. Transcripts found by
+web-searching the target word do not count: a keyword search returns
+the events where the word came up, so "3/3 found" is biased upward. A
+hit counts only if the market's resolution scope covers whoever said it
+(a moderator reading an analyst question counts only when the rules say
+"anyone"). Evidence: bet `1c991a8bd46c` (Netflix Q3 "TikTok"/"YouTube"
+Yes @0.80, est 0.85, -$5.00, RETRO-20261021-0215) cited "3/3 calls"
+found by searching "Netflix YouTube earnings call". One hit was a
+moderator read, and Q1 2026/Q4 2025, the two most recent unsearched
+calls, were never checked. Yes-side gate record after this: 1W/1L.
+
 **Method note (2026-09-16): count only the named speaker's lines.**
 These markets resolve on what the SPEAKER says ("if Warsh says the
 listed term"), and press-conference transcripts interleave reporter
@@ -8058,7 +8072,7 @@ resolved No.
   brackets) on such ladders become forecast-only until a sourced-sd
   ladder settles agent-closer. CPI/PPI single-threshold rows (the
   validated mechanical-econ family) are not affected.
-- **Say-the-word Yes-side base-rate gate: 1W/0L.** Peterbilt
+- **Say-the-word Yes-side base-rate gate: 1W/0L** (now 1W/1L after Netflix 1c991a8bd46c, RETRO-20261021-0215). Peterbilt
   'Manufacturing' 50d06b8745c2 won (+$1.10). n=1, no change. The
   lifetime 0W/4L Yes-side record still predates the gate.
 - **Outside-view-veto held where it mattered.** Saint-Martin 76946f6b4f07
