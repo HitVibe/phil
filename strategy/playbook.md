@@ -10049,3 +10049,18 @@ before AAA's ~08:15Z print.
   above-side n=9 sum -0.146 (fires at 10); No-side n=19 sum -0.157.
 - World Cup `e8f13aa9ba10` (pre-event judgment, no base rate, 0.55 vs 0.61) resolved Yes,
   +0.050; PSG devig market-agrees -0.006. No other change.
+
+## 2026-10-21 04:15Z: NC rally settled; half-gap rule REVERTED by its rule 4 (RETRO-20261021-0415)
+
+- **Rally below-mid half-gap rule (2026-10-17 00:20Z) REVERTED, along with its 10-17 "Half-gap is
+  mandatory" bullet.** The pre-registered rule-4 re-grade ran over KY + KS + NC: n=11, half-gap
+  -0.364 vs mid, raw note values -0.601. Raw beats both, in 2 of 3 rallies, and still leads
+  without the largest row. From now on, rally word reads below the mid are recorded RAW, like
+  above-mid and transcript-count reads. The note keeps `method=` and the base k/n. Any No edge
+  this restores still goes through the >0.10 outside-view veto and max_spread/WSV unchanged.
+  Pre-registered: after 3 more rallies settle, sum raw below-mid rows vs the mid. If that sum is
+  above +0.20, go to record-the-mid for below-mid rally reads.
+- AI "listed-count" re-check for `d65107d4d97b` (DEEP-2026-10-20): 6/6 confirmed complete
+  (AL, AK, AZ, GA, KY, KS). The bet lost, so the series is now 2/7. Not graded at n=1.
+- OVV totals: 265 rows, 106W/151L, CF +$155.07 (+15.00: Russia No +20, AF/GoA Yes -5).
+  No boundary change.
