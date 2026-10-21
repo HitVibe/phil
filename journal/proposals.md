@@ -4350,3 +4350,15 @@ There are no new hourly proposals since DEEP-10-10.
 - **P8 (screener cap vs FULL cadence): Status: PROPOSED, LOW-MEDIUM.** The quota was
   exhausted at the 18:12Z FULL on 10-19 again, and the 20Z and 22Z FULLs ran unscreened.
 - **P4, P7, subclass auto-tagger, P1, P2, P3(a): Status: unchanged (PROPOSED).**
+
+## DEEP-2026-10-21 - deep-retro proposals and status
+
+- No new hourly proposals in this window.
+- **P5 (placeholder-mid rows): Status: PROPOSED, MEDIUM.** Seventh illustration: 10 Netflix
+  post-event no-ask rows turn the 24h clean forecast sum of -0.809 into a raw -4.532. The
+  hourly agent excludes them by playbook rule (ae829f8d), but score.py's headline does not.
+- **P9 (new, LOW): `score.py --json` by-direction block.** Split settled forecasts into
+  above-mid and below-mid, and tight (spread ≤0.06) and wide book, excluding null-bid rows.
+  The say-the-word Yes-side suspension (DEEP-2026-10-21) rests on this cut, and its reopen
+  test needs it tracked. Status: PROPOSED.
+- **P8, P4, P7, subclass auto-tagger, P1, P2, P3(a): Status: unchanged (PROPOSED).**

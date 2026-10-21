@@ -6175,6 +6175,12 @@ residual is the price of staying honest about an unnamed reason.
 
 ## Utterance-market base-rate gate (enacted DEEP-2026-09-12)
 
+**SUSPENDED FOR BETS (DEEP-2026-10-21): Yes-side say-the-word bets are
+forecast-only until the reopen test below passes. No-side bets are unaffected.**
+The gate below still governs how a Yes-side read is RECORDED as a forecast.
+See the DEEP-2026-10-21 section at the end of this file for the evidence and
+the reopen test.
+
 A Yes-side BET on a say-the-word / trump-mention / vance-mention /
 earnings-call-mention market requires the rationale to QUOTE a
 frequency base rate from at least TWO comparable prior transcripts of
@@ -10064,3 +10070,40 @@ before AAA's ~08:15Z print.
   (AL, AK, AZ, GA, KY, KS). The bet lost, so the series is now 2/7. Not graded at n=1.
 - OVV totals: 265 rows, 106W/151L, CF +$155.07 (+15.00: Russia No +20, AF/GoA Yes -5).
   No boundary change.
+
+## DEEP-2026-10-21: Yes-side say-the-word bets suspended (forecast-only); No side kept
+
+**Rule.** Do not place a BET on the Yes side of a say-the-word market (trump/vance/
+speaker-mention, earnings-call-mention, press-conference word or count markets).
+Record the read as a forecast as usual. No-side bets keep every existing gate
+(base-rate gate, >0.10 outside-view veto, max_spread/WSV, thin-base floor).
+
+**Evidence (bets, score.py ledger).** Say-the-word Yes bets: n=11, 3W, -$35.56, Brier
+0.280 vs market 0.230. The market expected 6.41 wins, so z ~ -2.3. The last 4 are all
+losses: `0835bb544870`, `0800db938df9`, `1c991a8bd46c`, `d65107d4d97b` (-$20 in 48h).
+Say-the-word No bets: n=7, 7W, +$17.27, Brier 0.070 vs 0.111.
+
+**Evidence (forecast stream, the larger and decisive sample).** Settled say-the-word
+rows with a real two-sided book (non-null bid and ask), a spread <=0.06 (the bettable
+set) and |our P(Yes) - market P(Yes)| >= 0.05:
+- Above the mid (a Yes bet would follow): n=33 (~24 events), dBrier sum **+1.231**
+  (the book wins). Without the 3 largest rows it is still +0.412. By month: 09 n=11
+  +1.255; 10 n=22 **-0.024** (at the book, not beating it).
+- Below the mid (a No bet would follow): n=38 (~34 events), dBrier sum **-1.435** (we
+  win). By month: 09 n=19 -0.264; 10 n=19 -1.171. Trump n=30 -1.021, other speakers
+  n=8 -0.414.
+- Wide books (spread >0.06) show the opposite sign for above-mid rows (n=17, -2.072),
+  but those rows are unbettable under max_spread and many carry stale post-event asks.
+  They do not license Yes bets.
+
+**Reading.** This is not "Yes is wrong". Since October the Yes-side reads are AT the
+book, and at the book a bet loses the spread. The No side is the only say-the-word
+direction with demonstrated skill in both months. A bet needs demonstrated skill.
+
+**Reopen test (pre-registered).** Count tight-book, gap >=0.05, above-mid say-the-word
+forecast rows recorded from 2026-10-01 (currently n=22, sum -0.024). When that set
+reaches n>=40, reopen Yes-side bets only if the sum is <= -0.30. If the sum is above
++0.20 at any n>=30, the suspension becomes permanent pending a new method. Excluded
+from the count: placeholder-mid rows (null bid; RETRO-20261021-0015 rule). Recompute
+with the one-liner in journal/retros/DEEP-2026-10-21.md.
+
