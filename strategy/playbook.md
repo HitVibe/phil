@@ -10107,3 +10107,6 @@ reaches n>=40, reopen Yes-side bets only if the sum is <= -0.30. If the sum is a
 from the count: placeholder-mid rows (null bid; RETRO-20261021-0015 rule). Recompute
 with the one-liner in journal/retros/DEEP-2026-10-21.md.
 
+- RETRO-20261021-0620: the late-settling NC "SI" half-gap row `fe8d8fb1ac61` (0.77, raw 0.75,
+  recorded mid 0.71, No) adds +0.089 half-gap / +0.058 raw. Rule-4 totals at n=12: half-gap
+  -0.275, raw -0.543 vs mid, so the revert stands. SI rally series is now 6/9 (NC missed).
